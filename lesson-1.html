@@ -375,7 +375,7 @@ renderTrain();renderChallenge();
 const hb=document.getElementById("hatchBtn"),hi=document.getElementById("hatchImg");let hst=0;
 hb.onclick=()=>{
   if(hst===0){hst=1;hi.classList.add("wobble");hb.textContent="✨ 再点一下!";document.getElementById("hatchHint").textContent="蛋在剧烈晃动……!";}
-  else if(hst===1){hst=2;hi.classList.remove("wobble");hi.src="assets/juvenile.svg";
+  else if(hst===1){hst=2;hi.classList.remove("wobble");hi.src="assets/maoqiu-happy.svg";
     document.getElementById("hatchTitle").textContent="幼体毛球 · 诞生!";
     document.getElementById("hatchHint").textContent="欢迎来到这个世界,毛球!";
     hb.style.display="none";
