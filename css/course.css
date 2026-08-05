@@ -202,3 +202,22 @@ html.deck-mode,body.deck-body{height:100%;overflow:hidden;overscroll-behavior:no
 .deck-bar .dot.cur{background:var(--orange);transform:scale(1.35)}
 /* 触摸翻页热区提示(移动端两侧渐隐) */
 @media(max-width:740px){.deck-bar .dots{display:none}.deck-top .chap{display:none}}
+
+/* 一对一变体条 */
+.solo{background:#E8F1FA;border:2.5px solid var(--ink);border-left:8px solid var(--water);border-radius:12px;padding:10px 15px;font-size:13.5px;margin:12px 0;color:#27435C;font-weight:600}
+.solo::before{content:"👤 一对一 · ";font-weight:900}
+
+/* 证据类型角标(C6-1)与盘色卡 */
+.evtag{display:inline-block;font-weight:900;font-size:12px;padding:3px 12px;border-radius:99px;border:2.5px solid var(--ink);margin:0 4px 6px 0}
+.ev-play{background:#F3E3F7}.ev-rec{background:#FFF3D6}.ev-live{background:#FFE3DE}
+.plate-r .f{box-shadow:inset 0 0 0 6px #F5B0A0,var(--sh-sm)!important;background:#FDEeea!important}
+.plate-b .f{box-shadow:inset 0 0 0 6px #9CC8EE,var(--sh-sm)!important;background:#EAF3FC!important}
+.plate-g .f{box-shadow:inset 0 0 0 6px #CFCFCF,var(--sh-sm)!important;background:#F4F4F4!important}
+.stepbox{border:2.5px solid var(--ink);border-radius:14px;padding:12px 16px;margin:10px 0;background:var(--card);box-shadow:var(--sh-sm)}
+.stepbox.locked{opacity:.38;pointer-events:none;filter:grayscale(.6)}
+.stepbox h5{font-weight:900;font-size:15px;margin-bottom:6px}
+.vote{display:flex;gap:10px;flex-wrap:wrap;margin:8px 0}
+.vote .btn{font-size:14.5px;padding:9px 18px}
+.vote .btn.picked{background:var(--wind)}
+.result-line{font-weight:900;font-size:16px;margin:6px 0}
+.ok-line{color:#2E7D4F}.bad-line{color:#C0392B}
