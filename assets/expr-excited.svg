@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" width="400" height="400">
+  <ellipse cx="204" cy="368" rx="118.22958761271089" ry="14" fill="#2A1410" opacity="0.18"/>
+  <g transform="rotate(-10.842306624399498 200 228) scale(0.96) translate(8.333333333333341 9.500000000000009)">
+    
+    <g fill="#FFFFFF" stroke="#FFFFFF" stroke-width="17" stroke-linejoin="round">
+      <ellipse cx="136" cy="349" rx="32.56581043312326" ry="18"/><ellipse cx="264" cy="349" rx="32.56581043312326" ry="18"/>
+      <ellipse cx="58" cy="256" rx="23" ry="31" transform="rotate(15 58 256)"/><ellipse cx="342" cy="256" rx="23" ry="31" transform="rotate(-15 342 256)"/>
+      <ellipse cx="200" cy="228" rx="159.76971299014986" ry="128.1085755894892"/>
+      <path d="M 148 130 C 128 92, 104 58, 116 26 C 124 6, 148 8, 156 30 C 166 56, 164 96, 150 130 Z" transform="rotate(1.565664879977703 150 130) scale(1 1.0986350295436569)" transform-origin="150 130"/><path d="M 252 130 C 272 92, 296 58, 284 26 C 276 6, 252 8, 244 30 C 234 56, 236 96, 250 130 Z" transform="rotate(-1.565664879977703 250 130) scale(1 1.0986350295436569)" transform-origin="250 130"/><path d="M 205 112 C 211 64.3541185409762, 197 9.901682587806135, 178 -5.980277898535135 C 169 21.245940078049898, 179 53.00986105073243, 174 90 C 184 96, 197 100, 204 113 Z"/>
+    </g>
+    <ellipse cx="136" cy="349" rx="28.56581043312326" ry="16" fill="hsl(25, 76%, 81%)" stroke="#2A1410" stroke-width="5"/>
+    <ellipse cx="264" cy="349" rx="28.56581043312326" ry="16" fill="hsl(25, 76%, 81%)" stroke="#2A1410" stroke-width="5"/>
+    <ellipse cx="58" cy="256" rx="23" ry="31" fill="hsl(25, 76%, 81%)" stroke="#2A1410" stroke-width="5" transform="rotate(15 58 256)"/>
+    <ellipse cx="342" cy="256" rx="23" ry="31" fill="hsl(25, 76%, 81%)" stroke="#2A1410" stroke-width="5" transform="rotate(-15 342 256)"/>
+    <ellipse cx="200" cy="228" rx="159.76971299014986" ry="128.1085755894892" fill="hsl(33, 82%, 65%)"/>
+    <clipPath id="clip-smokeseed1-juvenile-n"><ellipse cx="200" cy="228" rx="159.76971299014986" ry="128.1085755894892"/></clipPath>
+    <g clip-path="url(#clip-smokeseed1-juvenile-n)">
+      <ellipse cx="279.8848564950749" cy="294.61645930653435" rx="123.02267900241539" ry="94.800345936222" fill="hsl(39, 86%, 51%)"/>
+      <ellipse cx="137.68981193384155" cy="148.5726831345167" rx="62.310188066158446" ry="44.838001456321216" fill="hsl(25, 76%, 81%)"/>
+    </g>
+    <ellipse cx="200" cy="228" rx="159.76971299014986" ry="128.1085755894892" fill="none" stroke="#2A1410" stroke-width="6" stroke-linejoin="round"/>
+    <path d="M 148 130 C 128 92, 104 58, 116 26 C 124 6, 148 8, 156 30 C 166 56, 164 96, 150 130 Z" transform="rotate(1.565664879977703 150 130) scale(1 1.0986350295436569)" transform-origin="150 130" fill="hsl(33, 82%, 65%)" stroke="#2A1410" stroke-width="5" stroke-linejoin="round"/><path d="M 252 130 C 272 92, 296 58, 284 26 C 276 6, 252 8, 244 30 C 234 56, 236 96, 250 130 Z" transform="rotate(-1.565664879977703 250 130) scale(1 1.0986350295436569)" transform-origin="250 130" fill="hsl(33, 82%, 65%)" stroke="#2A1410" stroke-width="5" stroke-linejoin="round"/><path d="M 141 116 C 130 92, 120 68, 125 44 C 134 56, 139 80, 145 110 Z" transform="rotate(1.565664879977703 150 130) scale(1 1.0986350295436569)" transform-origin="150 130" fill="hsl(29, 64%, 89%)"/><path d="M 259 116 C 270 92, 280 68, 275 44 C 266 56, 261 80, 255 110 Z" transform="rotate(-1.565664879977703 250 130) scale(1 1.0986350295436569)" transform-origin="250 130" fill="hsl(29, 64%, 89%)"/><path d="M 205 112 C 211 64.3541185409762, 197 9.901682587806135, 178 -5.980277898535135 C 169 21.245940078049898, 179 53.00986105073243, 174 90 C 184 96, 197 100, 204 113 Z" fill="hsl(51, 88%, 73%)" stroke="#2A1410" stroke-width="5" stroke-linejoin="round"/>
+    <ellipse cx="99.3450808162056" cy="253" rx="19" ry="12" fill="#FF7A8E" opacity="0.5710374979965855"/>
+    <ellipse cx="300.6549191837944" cy="253" rx="19" ry="12" fill="#FF7A8E" opacity="0.5710374979965855"/>
+    <g fill="none" stroke="#2A1410" stroke-width="6" stroke-linecap="round"><path d="M 116 166 Q 145 150 170 163"/><path d="M 230 163 Q 255 150 284 166"/></g>
+    <g><circle cx="145" cy="213" r="37.25211106869392" fill="#FFFCEF" stroke="#2A1410" stroke-width="5"/><circle cx="149" cy="217" r="25.522410193154407" fill="#2A1B52"/><circle cx="139" cy="202.5694089007657" r="9.31302776717348" fill="#FFF"/><circle cx="154" cy="226" r="4.5" fill="#FFF" opacity="0.9"/></g><g><circle cx="255" cy="213" r="37.25211106869392" fill="#FFFCEF" stroke="#2A1410" stroke-width="5"/><circle cx="259" cy="217" r="25.522410193154407" fill="#2A1B52"/><circle cx="249" cy="202.5694089007657" r="9.31302776717348" fill="#FFF"/><circle cx="264" cy="226" r="4.5" fill="#FFF" opacity="0.9"/></g>
+    <path d="M 150 258 Q 200 238 250 258 Q 258 308 200 326 Q 142 308 150 258 Z" fill="#7A2418" stroke="#2A1410" stroke-width="5.5" stroke-linejoin="round"/><path d="M 166 292 Q 200 314 234 292 Q 200 304 166 292 Z" fill="#FF6F6F"/><path d="M 160 262 Q 200 250 240 262 Q 200 270 160 262 Z" fill="#FFFCEF"/>
+    
+    
+  </g></svg>
