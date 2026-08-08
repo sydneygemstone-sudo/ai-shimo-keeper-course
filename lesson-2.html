@@ -2,8 +2,41 @@
 <html lang="zh-CN">
 <head>
 <meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<title>第 2 章 · 幼体章 — 喂养日</title>
+<title>第 2 章 · 幼体章 · 喂养日</title>
 <link rel="stylesheet" href="css/course.css?v=4">
+<style>
+/* ── 喂养台(课件自带真模型)── */
+.stn{display:grid;grid-template-columns:250px 1fr;gap:13px;align-items:start}
+@media(max-width:860px){.stn{grid-template-columns:1fr}}
+.stn-cam{background:linear-gradient(180deg,#2A1C30,#40284A);border:var(--bd);border-radius:16px;box-shadow:var(--sh-sm);padding:7px;text-align:center;color:#FFE9C9}
+#stationCam{width:100%;height:auto;max-height:34vh;border-radius:10px;background:#111;display:block;aspect-ratio:4/3;margin:0 auto}
+.stn-tag{display:inline-block;color:var(--ink);font-size:11px;font-weight:900;padding:2px 10px;border-radius:99px;margin-top:7px;border:2px solid var(--ink)}
+.tag-cam{background:#FFD9D2}.tag-demo{background:#FFF3D6}
+.stn-sw{display:flex;gap:4px;justify-content:center;flex-wrap:wrap;margin-top:5px}
+.stn-sw button{font-family:inherit;font-weight:900;font-size:12px;padding:4px 9px;border:2px solid var(--ink);border-radius:9px;background:var(--cream);cursor:pointer}
+.stn-sw button.on{background:var(--orange);color:#fff}
+.bowls{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.bowl{border:2.5px solid var(--ink);border-radius:14px;padding:9px 11px;background:var(--card);box-shadow:var(--sh-sm)}
+.bowl.b1{border-left:8px solid var(--fire)}.bowl.b2{border-left:8px solid var(--gold)}
+.bowl h6{font-size:14.5px;font-weight:900;display:flex;justify-content:space-between;align-items:center}
+.bowl .n{background:var(--ink);color:#FFE9C9;border-radius:99px;padding:1px 9px;font-size:12.5px}
+.thumbs{display:flex;flex-wrap:wrap;gap:3px;margin:5px 0;min-height:24px}
+.thumbs img{width:22px;height:22px;border-radius:5px;border:1.5px solid var(--ink);display:block}
+.thumbs img.bad{outline:2.5px solid #C0392B;outline-offset:1px}
+.bowl .fd{display:flex;gap:5px}
+.bowl .fd button{flex:1;font-family:inherit;font-weight:900;font-size:12.5px;padding:6px 4px;border:2.5px solid var(--ink);border-radius:10px;background:var(--cream);cursor:pointer}
+.bowl .fd button:hover{background:var(--orange);color:#fff}
+.pbar{height:14px;border:2.5px solid var(--ink);border-radius:99px;background:#fff;overflow:hidden;margin:6px 0}
+.pbar i{display:block;height:100%;width:0;background:var(--myst);transition:width .12s linear}
+.conf{margin:7px 0}
+.conf .row{display:flex;align-items:center;gap:9px;margin:5px 0}
+.conf .lb{width:74px;font-weight:900;font-size:14px;flex:0 0 auto}
+.conf .bar{flex:1;height:26px;border:2.5px solid var(--ink);border-radius:99px;background:#fff;overflow:hidden}
+.conf .bar i{display:block;height:100%;width:0;transition:width .16s}
+.conf .v{width:52px;text-align:right;font-weight:900;font-size:15px;font-variant-numeric:tabular-nums}
+.conf .row.win .lb{color:var(--orange-deep)}
+.stn-msg{font-weight:800;font-size:13px;margin-top:5px;min-height:18px}
+</style>
 </head>
 <body>
 <div class="deck">
@@ -16,20 +49,24 @@
 
 <!-- 1 封面 -->
 <section class="slide" data-t="封面"><div class="inner cover">
-  <span class="kicker">第 2 章 · 幼体章 · 90 分钟(含中场 10')</span>
+  <span class="kicker">第 2 章 · 幼体章 · 90 分钟（含 10 分钟中场）</span>
   <h1>喂养日</h1>
   <div class="sub-en">Feeding Day</div>
   <img class="chapimg" src="assets/expr-sleep.svg" alt="饿到蔫的毛球">
-  <p class="lead">幼体毛球<b>饿哭了</b>——可它不吃饭、不吃零食。《喂养手册》残页揭晓:幼体使魔以<b>「例子」为食</b>。今天亲手喂它学会认食物;一场「坏食物事故」让全班亲眼看到:<b>喂错例子,使魔会学错。</b></p>
-  <div class="chips" style="justify-content:center"><span class="chip hot">徽章:喂养章</span><span class="chip">英语:train · example · data</span><span class="chip">第一个动手高峰</span></div>
+  <p class="lead">毛球抱着肚子哭：不吃饭，不吃水果，也不吃零食。这时，《喂养手册》的残页飘了下来——幼体使魔真正的食物竟然是<b>例子</b>。今天，我们要亲手给它喂例子，教它认食物，再看看<b>坏食物事故</b>会发生什么。</p>
+  <div class="chips" style="justify-content:center"><span class="chip hot">徽章：喂养章</span><span class="chip">英语：train · example · data</span><span class="chip">第一个动手高峰</span></div>
 </div></section>
 
 <!-- 2 老师底牌 -->
 <section class="slide" data-t="老师底牌"><div class="inner">
-  <div class="secret" style="margin:0"><span class="tag">给老师的底牌 · 不投给孩子</span>
-    <ul><li>目标:① 训练=喂例子(example),一大筐例子叫数据(data);跑通「喂例子→训练→测试」闭环;② <b>AI 学什么全看人喂什么</b>——标签放错,整张网被带偏;能发现、也能改回来;③ 「神经网络」听过即可,口径是「很多小计算一起打分」,<b>不说「一个光点错就全错」</b>。</li>
-    <li><b>开课绿灯五项(缺一切「记录台」):</b>① Teachable Machine 页面已打开 ② 相机权限已给 ③ 两类项目已预建 ④ 「事故记录」页可点开 ⑤ 电源网络正常。用<b>老师笔记本网页版+投屏</b>;苹果/香蕉实物各 3-4 个;两块不同颜色桌垫(测「认食物还是认背景」)。</li>
-    <li><b>现场三分支纪律:</b>预期结果→观察命名解释;没出现→如实描述+切保存记录;永远不假装。任何一步超 60 秒无反馈,立即切记录台。</li></ul>
+  <div class="secret" style="margin:0"><span class="tag">给老师的底牌 · 课前自己看，不投给孩子</span>
+    <ul>
+    <li><b>三个真实目标：</b>① 训练＝喂例子（example），一筐例子叫数据（data），跑通「喂→训→测」。② <b>喂什么，它就学什么</b>——标签放错会带偏星光网，发现了也能改回来。③「神经网络」听过即可，说法统一为「很多小计算一起打分」，<b>不说「错一个光点就全错」</b>。</li>
+    <li><b>喂养台是课件自带的真模型，不是外站。</b>取样、计算、出信心条都在本机，<b>不联网、不上传</b>，例子只在内存里，刷新即清空。第 1 章是纸上模拟，本章是真训练。</li>
+    <li><b>没摄像头或不给权限，自动切「演示模式」</b>，照样能训练、能出事故、能修复。课前点一次「摄像头」确认权限。<b>任何一步超 60 秒没反馈，直接切演示模式往下走。</b></li>
+    <li><b>头号禁令，当场讲清楚：</b>镜头只对准普通物品和干净桌面，<b>不拍人脸、姓名、家庭环境</b>。</li>
+    <li>准备：苹果、香蕉各 3-4 个；<b>两块不同颜色的桌垫</b>；没喂过的梨 1 个。</li>
+    </ul>
   </div>
 </div></section>
 
@@ -41,22 +78,23 @@
     <div class="tl a" style="cursor:default"><span class="tt" style="background:var(--study)">图鉴</span><b>8-18' 肚子里的星光网</b></div>
     <div class="tl a" style="cursor:default"><span class="tt" style="background:var(--trial)">试炼一</span><b>18-35' 传灯接力</b></div>
     <div class="tl a" style="cursor:default"><span class="tt" style="background:var(--break)">中场</span><b>35-45' 星光操</b></div>
-    <div class="tl a" style="cursor:default"><span class="tt" style="background:var(--trial)">核心</span><b>45-68' 喂养台开张</b></div>
-    <div class="tl a" style="cursor:default"><span class="tt" style="background:var(--trial)">实验</span><b>68-78' 坏食物事故</b></div>
-    <div class="tl a" style="cursor:default"><span class="tt" style="background:var(--rite)">仪式</span><b>78-86' 授章 + 真身</b></div>
-    <div class="tl a" style="cursor:default"><span class="tt" style="background:var(--eng)">英语</span><b>86-90' 英语 + 预告</b></div>
+    <div class="tl a" style="cursor:default"><span class="tt" style="background:var(--trial)">核心</span><b>45-60' 喂养台 · 喂例子</b></div>
+    <div class="tl a" style="cursor:default"><span class="tt" style="background:var(--trial)">核心</span><b>60-70' 喂养台 · 测验</b></div>
+    <div class="tl a" style="cursor:default"><span class="tt" style="background:var(--trial)">实验</span><b>70-80' 坏食物事故</b></div>
+    <div class="tl a" style="cursor:default"><span class="tt" style="background:var(--rite)">仪式</span><b>80-86' 授章与真身</b></div>
+    <div class="tl a" style="cursor:default"><span class="tt" style="background:var(--eng)">英语</span><b>86-90' 英语与预告</b></div>
   </div>
 </div></section>
 
 <!-- 4 模式卡 -->
 <section class="slide" data-t="模式卡"><div class="inner">
-  <div class="shead"><h2>👥 授课模式卡(课前选定,可跳过)</h2></div>
+  <div class="shead"><h2>👥 授课模式卡</h2></div>
   <div class="tbwrap" style="margin:0"><table class="tb">
     <tr><th>活动</th><th>1 对 1</th><th>2-8 人</th><th>9 人以上</th></tr>
-    <tr><td>传灯接力</td><td>四盏灯桌面版(见该页 👤 条)</td><td>4-8 人一列传手势</td><td>10 人一列,分两队轮</td></tr>
-    <tr><td>星光操</td><td>乒乓传灯:师生互传,漏了喊「回查」</td><td colspan="2">站成网传一圈,越传越快</td></tr>
-    <tr><td>喂养台采样</td><td>孩子当摆放师管 5 种角度,老师管相机边界</td><td colspan="2">轮流上来采样,其他人预测混淆物</td></tr>
-    <tr><td>齐呼齐诵</td><td>师生问答/接龙</td><td colspan="2">全班齐声</td></tr>
+    <tr><td>传灯接力</td><td>按该页 👤 提示摆四盏灯</td><td>全班排一列传手势</td><td>分两队，各排一列</td></tr>
+    <tr><td>星光操</td><td>乒乓传灯，漏了就喊「回查」</td><td colspan="2">站成网传一圈，越传越快</td></tr>
+    <tr><td>喂养台采样</td><td>孩子管摆放，老师管镜头边界</td><td colspan="2">轮流上来采样，其他人先预测</td></tr>
+    <tr><td>齐呼齐诵</td><td>师生接龙</td><td colspan="2">全班齐声</td></tr>
   </table></div>
 </div></section>
 
@@ -64,85 +102,119 @@
 <section class="slide" data-t="剧情:饿哭"><div class="inner">
   <div class="shead"><span class="time">0-8'</span><span class="type t-story">剧情事件</span><h2>毛球饿哭了</h2></div>
   <span class="evtag ev-play">🎭 剧情表演</span>
-  <div class="act">灯调暗,先放"哭声"。投影本页蔫蔫的毛球。</div>
-  <div class="say"><span class="who">师</span><div class="bub">大事不好!毛球从昨晚一直哭到现在。饼干送到嘴边——扭头!水果摆成小山——不看!连老师的午饭都端来了——它连闻都不闻!幸好,协会寄来了《喂养手册》的一页……(翻下一页)</div></div>
+  <div class="act">灯调暗。先播放哭声，也可以由老师模仿。再投这一页。</div>
+  <div class="say"><span class="who">师</span><div class="bub">大事不好——毛球从昨晚一直哭到现在。我递上饼干，它扭头。水果堆成小山，它不看。连我的午饭都端来了，它闻都不闻。幸好，协会寄来了一页《喂养手册》。</div></div>
 </div></section>
 
 <!-- 6 喂养手册 -->
 <section class="slide" data-t="喂养手册"><div class="inner">
-  <div class="big" style="font-size:clamp(22px,3.6vw,34px)">「幼体使魔不吃饭,也不吃零食。<br>它张口就吞的,是——<b style="color:#FFB25E">例子(example)</b>。<br>一筐例子,图鉴上叫<b style="color:#FFB25E">数据(data)</b>。<br>喂得越多、越不一样,它长得越聪明;<br>喂错了……后果自负。」<small>——《喂养手册》残页 · 驯养师协会喂养科</small></div>
-  <div class="say"><span class="who">师</span><div class="bub">例子怎么喂?往哪儿喂?为什么"后果自负"?今天全要搞清楚——不然它得饿到下周。</div></div>
+  <div class="big" style="font-size:clamp(22px,3.6vw,34px)">「幼体使魔不吃饭，也不吃零食。<br>它张口就吞的是——<b style="color:#FFB25E">例子（example）</b>。<br>一筐例子在图鉴上叫作<b style="color:#FFB25E">数据（data）</b>。<br>例子越多，彼此越不一样，它就学得越好；<br>标签放错了……后果自负。」<small>——《喂养手册》残页 · 驯养师协会喂养科</small></div>
+  <div class="say"><span class="who">师</span><div class="bub">例子怎么喂？喂到哪儿？「后果自负」又是什么意思？今天，我们要把这些全弄明白——不然，毛球还要饿到下周。</div></div>
 </div></section>
 
 <!-- 7 星光网 -->
 <section class="slide" data-t="星光网"><div class="inner">
   <div class="shead"><span class="time">8-18'</span><span class="type t-study">图鉴研究</span><h2>肚子里的星光网</h2></div>
-  <div class="say"><span class="who">师</span><div class="bub">使魔的肚子里没有胃——有一张<b>星光网</b>:几百万个小光点连成的网。<b>没有哪一盏灯单独认识苹果</b>——每个光点只做一点小小的计算,给各种线索<b>悄悄加分减分</b>;几百万个一起算,最后整张网把得分最高的答案推出来:<b>「这是苹果!」</b>例子喂进去,网就微微调一调;一万个例子过完,网就"长"出了认苹果的本领。<b>喂例子,喂的就是这张网。</b></div></div>
-  <div class="big">它的学名超长,当咒语拍手念:<br>neu · ral · net · work<small>神经网络 —— 听过即可,不考</small></div>
-  <div class="rule"><b>真身锚点:</b>星光网里没有真的星星——每个光点的真身是一个小小的<b>计算开关</b>。很多计算连在一起,看起来就像活的。</div>
+  <div class="say"><span class="who">师</span><div class="bub">使魔的肚子里没有胃，只有一张<b>星光网</b>——几百万个小光点连成的网。</div></div>
+  <div class="big" style="font-size:clamp(19px,2.9vw,27px)">没有哪个光点能单独认出苹果。<br>每个光点只做一点小计算，给线索加分或减分。<br>几百万个一起算，才得出那句：<b style="color:#FFB25E">「这是苹果！」</b><small>拍手念它的英文名：neu · ral · net · work（神经网络，听过就好，不考）</small></div>
+  <div class="say"><span class="who">师</span><div class="bub">喂进一个例子，星光网就微微调一调。一万个例子喂完，它就有了认苹果的本领。<b>喂例子，就是在训练这张网。</b></div></div>
+  <div class="rule"><b>真身锚点：</b>星光网里没有真的星星。每个光点，其实都是一个小小的<b>计算开关</b>。</div>
 </div></section>
 
 <!-- 8 传灯接力 -->
 <section class="slide" data-t="传灯接力"><div class="inner">
-  <div class="shead"><span class="time">18-35'</span><span class="type t-trial">喂养试炼 一</span><h2>传灯接力(不插电)</h2></div>
-  <p style="font-size:16px">排成一列 = 线索的接力路。排头看食物,把特征变成手势(圆的?红的?长的?)一个接一个传下去,最后一人<b>把收到的线索合在一起</b>喊出是什么。玩 3 轮,每轮重新排队。</p>
-  <div class="big">✋ 左手举高 = 圆的<br>🤚 右手举高 = 红的/黄的<br>🙌 双手张开 = 长的<small>第 3 轮变阵:老师给排头看苹果,却大声宣布「这是香蕉的例子!」——标签放错了</small></div>
-  <div class="say"><span class="who">师</span><div class="bub">第 3 轮怪不怪?线索明明是「圆的、红的」,标签却写着香蕉——<b>标签放错,整串线索就全教歪了</b>。真的喂养也一样:例子的标签放错盆,毛球的整张网都会被带偏。下半场喂养台,亲眼看这场事故!</div></div>
-  <div class="solo">四盏灯桌面版:投影四步「看见食物→选颜色→选形状→合在一起猜」。孩子看实物点选颜色和形状,你<b>只看他传来的两条线索</b>猜答案;第二轮交换;第三轮你故意把一张特征说错,让孩子从后往前「查错灯」:「偏差从哪一步开始?」</div>
+  <div class="shead"><span class="time">18-35'</span><span class="type t-trial">喂养试炼 一</span><h2>不插电传灯接力</h2></div>
+  <p style="font-size:16px">大家排成一列，这就是线索的接力路。排头看食物，把特征变成手势，往后传。最后一人<b>把收到的线索合起来</b>，喊出答案。玩 3 轮，每轮重新排队。</p>
+  <div class="big">✋ 左手举高＝圆的<br>🤚 右手举高＝红的／黄的<br>🙌 双手张开＝长的<small>第 3 轮变阵：老师让排头看苹果，却宣布「这是香蕉的例子！」</small></div>
+  <div class="say"><span class="who">师</span><div class="bub">第 3 轮是不是很奇怪？线索明明是「圆的、红的」，标签却写成了香蕉。<b>标签放错，星光网就会跟着学错。</b>下半场，我们到喂养台亲眼看看这场事故。</div></div>
+  <div class="solo">在桌面摆四盏灯。孩子看实物，点选颜色和形状；你<b>只凭这两条线索</b>猜答案。第二轮交换角色。第三轮，你故意传错一条线索，让孩子从后往前查：「从哪一步开始错了？」</div>
 </div></section>
 
 <!-- 9 中场 -->
 <section class="slide" data-t="中场"><div class="inner">
   <div class="shead"><span class="time">35-45'</span><span class="type t-break">中场休息</span><h2>星光操</h2></div>
-  <p style="font-size:16px">班课:站成网,手势快速传一圈,越传越快,传乱了全体大笑重来。</p>
-  <div class="solo">乒乓传灯 60 秒:你做一个手势,孩子原样回传;第 2 轮一次传两个特征;第 3 轮你故意漏一个,孩子喊「回查」——「少一盏灯就喊回查,不是笑谁出错。」其余时间正常走动喝水。</div>
-  <div class="say mq"><span class="who"><img src="assets/expr-idle.svg" alt=""></span><div class="bub">(它闻到例子的味道了,不哭了,眼睛亮了……)</div></div>
+  <p style="font-size:16px">大家站成一张网，把手势传一圈，越传越快。传乱了，笑一笑，再重来。</p>
+  <div class="solo">乒乓传灯 60 秒。你做手势，孩子照着回传。第 2 轮，一次传两个特征。第 3 轮，你故意漏一个，孩子喊「回查」。提醒孩子：「漏传一盏灯，就喊『回查』；不笑话出错的人。」</div>
+  <div class="say mq"><span class="who"><img src="assets/expr-idle.svg" alt=""></span><div class="bub">它闻到例子的味道了！不哭了，眼睛也亮了……</div></div>
 </div></section>
 
-<!-- 10 喂养台 -->
-<section class="slide" data-t="喂养台"><div class="inner">
-  <div class="shead"><span class="time">45-68'</span><span class="type t-trial">核心 · 喂养试炼 二</span><h2>喂养台开张</h2></div>
-  <span class="evtag ev-live">🔴 现场运行 · 超 60 秒无反馈切记录台</span>
-  <div class="grid g2">
-    <div class="card" style="margin:0"><h4 style="font-weight:900">① 开食盆 → ② 喂例子(两阶段)</h4><p style="font-size:14px">两个食盆:1 号=苹果,2 号=香蕉。<br><b>阶段一:</b>干净桌面,镜头只框物体,各拍 10 张;<br><b>阶段二:</b>有控制地变化——角度、远近、左右各来几张。「不是按得越多越厉害:二十张一模一样,它其实只吃到一种例子。<b>变化要围着任务变:</b>角度可以变,脸、姓名、教室角落不该混进来——不然毛球可能把你的袖子当成苹果线索!」</p></div>
-    <div class="card" style="margin:0"><h4 style="font-weight:900">③ 消化 → ④ 测验(先预测再揭晓)</h4><p style="font-size:14px">训练前,孩子先圈出「我预测会混淆的测试物」。测验:举苹果看<b>信心条</b>;<b>换一块颜色不同的桌垫再举一次</b>——「它认的是食物,还是背景?」;最后拿<b>没喂过的梨</b>:先问「它有梨食盆吗?」(没有!)再揭晓——「<b>它只有两个按钮,没有『都不是』</b>。不管条多长,先是我们把选择盒做窄了,不是梨变成了苹果。」</p></div>
+<!-- 10 喂养台 · 喂例子 -->
+<section class="slide" data-t="喂养台:喂例子"><div class="inner">
+  <div class="shead"><span class="time">45-60'</span><span class="type t-trial">核心 · 喂养试炼 二</span><h2>喂养台开张</h2></div>
+  <span class="evtag ev-live">🔴 课件自带真模型 · 本机计算，不联网、不上传</span>
+  <div class="say"><span class="who">师</span><div class="bub">协会批准——本班喂养台<b>现在开张</b>！今天，我们要教毛球认苹果和香蕉。每按一下「喂」，就喂进去一个 <b>example</b>。</div></div>
+  <div class="stn">
+    <div class="stn-cam" data-cam></div>
+    <div>
+      <div class="bowls" id="bowls"></div>
+      <div class="act" style="margin:10px 0 6px">每个食盆先喂 8 张<b>只框住物体的例子</b>。再变换角度、远近和左右位置，凑到 12-16 张。二十张一模一样的照片，也只算一种例子。<b>只改变与任务有关的地方。</b></div>
+      <div class="pbar"><i id="trainBar"></i></div>
+      <p style="text-align:center;margin-top:2px">
+        <button class="btn" id="trainBtn" onclick="stnTrain()">🍽 让星光网消化</button>
+        <button class="btn alt" style="font-size:12.5px;padding:8px 14px" onclick="stnReset()">↺ 清空喂养台</button>
+      </p>
+      <div class="stn-msg" id="stnMsg1" style="text-align:center"></div>
+    </div>
   </div>
-  <div class="rule"><b>喂养科头号禁令(当场立):</b>只拍食物和物品,<b>永远不拍人、不拍脸、不拍带名字的东西。</b></div>
-  <div class="chips"><span class="chip">teachablemachine.withgoogle.com</span><span class="chip hot">齐呼(一对一改问答):毛球,吃饱了吗?——饱啦!谢谢驯养师!</span></div>
+  <div class="rule">喂养科头号禁令：<b>镜头只对准普通物品和干净桌面，不拍人脸、姓名、家庭环境。</b></div>
 </div></section>
 
-<!-- 11 坏食物事故 -->
+<!-- 11 喂养台 · 测验 -->
+<section class="slide" data-t="喂养台:测验"><div class="inner">
+  <div class="shead"><span class="time">60-70'</span><span class="type t-trial">核心 · 当场验收</span><h2>它学会了吗？</h2></div>
+  <span class="evtag ev-live">🔴 先预测，再举给它看</span>
+  <div class="stn">
+    <div class="stn-cam" data-cam></div>
+    <div>
+      <div class="conf" id="conf"></div>
+      <div class="stn-msg" id="stnMsg2"></div>
+      <div class="act" style="margin-top:8px"><b>三道考题，一道一道来。每道题先让孩子预测，再举给毛球看。</b><br>① 举苹果，再举香蕉——信心条有多长？<br>② <b>换一块颜色不同的桌垫</b>再举苹果：「它认的是食物，还是背景？」<br>③ 举一个<b>没喂过的梨</b>：先问「它有梨食盆吗？」，再看结果。</div>
+      <div class="rule">想让第 ② 题<b>结果明显</b>：采样时，<b>苹果全放白垫，香蕉全放蓝垫</b>。测试时，再把苹果放到蓝垫上。这是在真模型里重演第 1 章的「红盘子」——照屏幕念，别预告结果。</div>
+      <div class="say"><span class="who">师</span><div class="bub"><b>它只能在两个选项里选，没有「都不是」。</b>无论哪根信心条更长，都是因为我们只给了它苹果和香蕉，不是梨真的变成了苹果。</div></div>
+    </div>
+  </div>
+  <div class="chips" style="justify-content:center"><span class="chip hot">齐呼：毛球，吃饱了吗？——饱啦！谢谢驯养师！</span></div>
+</div></section>
+
+<!-- 12 坏食物事故 -->
 <section class="slide" data-t="坏食物事故"><div class="inner">
-  <div class="shead"><span class="time">68-78'</span><span class="type t-trial">全课点睛</span><h2>坏食物事故(双轨)</h2></div>
-  <div class="card" style="margin:0 0 12px;border-left:8px solid var(--book)">
-    <span class="evtag ev-rec">📼 保存记录 · 必做主线</span>
-    <h4 style="font-weight:900">协会事故档案 · 昨日喂养台记录</h4>
-    <p style="font-size:14.5px;line-height:2">喂错前:举苹果 → 「苹果」信心条 ▓▓▓▓▓▓▓▓▓░ 92%<br>把 5 张苹果照片放进香蕉盆,重新训练……<br>喂错后:举同一个苹果 → 「香蕉」信心条 ▓▓▓▓▓▓░░░░ 61% ✗<br><b>它没坏、没病——是错的例子把网带偏了。</b></p>
+  <div class="shead"><span class="time">70-80'</span><span class="type t-trial">全课点睛</span><h2>坏食物事故</h2></div>
+  <div class="say"><span class="who">师</span><div class="bub">现在来验证手册里的「后果自负」。协会把这种情况叫作<b>坏食物</b>事故——不是食物坏了，而是<b>苹果进错了食盆，标签也就放错了</b>。</div></div>
+  <div class="stn">
+    <div class="stn-cam" data-cam></div>
+    <div>
+      <div class="conf" id="conf2"></div>
+      <div class="pbar"><i id="trainBar2"></i></div>
+      <p style="text-align:center;margin:4px 0">
+        <button class="btn" style="background:var(--fire)" id="accBtn" onclick="stnAccident()">☠️ 把 5 张苹果例子丢进香蕉食盆，重训</button>
+        <button class="btn" style="background:var(--wind)" id="fixBtn" onclick="stnRepair()">🧹 把坏例子放回原食盆，重训</button>
+      </p>
+      <div class="stn-msg" id="stnMsg3" style="text-align:center"></div>
+      <div class="act" style="margin-top:8px">结果<b>照屏幕念，不预演</b>。翻了就说：「它没坏，是我们放错了标签。」没翻就问：「信心条变了吗？」——然后<b>再点一次，多丢 5 张</b>，让全班盯着那根条一步步往下走。坏例子的影响会<b>累积</b>。</div>
+    </div>
   </div>
-  <div class="card" style="margin:0"><span class="evtag ev-live">🔴 现场挑战 · 可选</span>
-    <p style="font-size:14px">复制一个新项目,把 5 张苹果故意放进香蕉盆,重新训练——<b>结果无论翻不翻转,都读真实屏幕</b>:翻了→「事故重演了!」;没翻→「这 5 张坏例子还没把它完全拉过去,但信心条有没有变化?<b>错误例子的伤害不一定一下子爆炸——所以更要检查标签,不能等它闯大祸才发现。</b>」</p></div>
-  <div class="act">善后仪式:把放错盆的例子删掉 → 重新喂对 → 测试恢复。「喂坏了不可怕,<b>能发现、也能改回来</b>的才是好驯养师。」</div>
+  <div class="big" style="font-size:clamp(19px,2.9vw,27px)">它没坏，也没病。<br><b style="color:#FFB25E">是贴错标签的坏例子把星光网带偏了。</b><small>标签放错不可怕，能发现、能改回来，才是好驯养师。</small></div>
 </div></section>
 
-<!-- 12 授章+真身 -->
+<!-- 13 授章+真身 -->
 <section class="slide" data-t="授章+真身"><div class="inner">
-  <div class="say"><span class="who">师</span><div class="bub">今天,毛球从「什么都认不出」变成了「能认出苹果和香蕉、还差点被我们教错」——这一课,它长大了,你们也是。</div></div>
-  <div class="badges"><div class="badge on"><div class="coin">👁</div><b>慧眼章</b><small>L1</small></div><div class="badge on"><div class="coin">🍎</div><b>喂养章</b><small>L2 · 新获得!</small></div><div class="badge"><div class="coin">🔍</div><b>鉴言章</b><small>L3</small></div><div class="badge"><div class="coin">📜</div><b>契约章</b><small>L4</small></div><div class="badge"><div class="coin">⚔️</div><b>出战章</b><small>L5</small></div></div>
-  <div class="big">图鉴真身(齐诵)<br>「使魔的真身,是人造的、会学习的电脑程序。<br>它不是小动物,不是魔法,也没有一颗心。<br>知道真身,还能演好戏——才是高级驯养师。」</div>
+  <div class="say"><span class="who">师</span><div class="bub">今天，毛球从什么都认不出，变成了能认苹果和香蕉。它也让我们看见：标签放错，它就会学错。这一课里，它长大了，你们也长大了。</div></div>
+  <div class="badges"><div class="badge on"><div class="coin">👁</div><b>慧眼章</b><small>L1</small></div><div class="badge on"><div class="coin">🍎</div><b>喂养章</b><small>L2 · 新获得！</small></div><div class="badge"><div class="coin">🔍</div><b>鉴言章</b><small>L3</small></div><div class="badge"><div class="coin">📜</div><b>契约章</b><small>L4</small></div><div class="badge"><div class="coin">⚔️</div><b>出战章</b><small>L5</small></div></div>
+  <div class="big">图鉴真身（齐诵）<br>「使魔的真身，是人造的、会学习的电脑程序。<br>它不是小动物，不是魔法，也没有一颗心。<br>知道真身，还能演好戏——才是高级驯养师。」</div>
 </div></section>
 
-<!-- 13 英语+预告 -->
+<!-- 14 英语+预告 -->
 <section class="slide" data-t="英语+预告"><div class="inner">
-  <div class="shead"><span class="time">86-90'</span><span class="type t-eng">英语时间 + 预告</span><h2>三个词带回家</h2></div>
+  <div class="shead"><span class="time">86-90'</span><span class="type t-eng">英语时间 · 预告</span><h2>三个词带回家</h2></div>
   <div class="big">train · example · data<br><small>We train AI with examples!</small></div>
-  <div class="say mq"><span class="who"><img src="assets/expr-excited.svg" alt=""></span><div class="bub"><b>预告(压低声音):</b>今晚它会消化所有例子。图鉴说,幼体吃饱之后……<b>它会开口说话</b>。可手册背面还有半行被撕掉的警告,只拼得出四个字:『它的第一句……』后面写了什么?明天,让它亲口告诉你们。下章:<b>开口章</b>。</div></div>
+  <div class="say mq"><span class="who"><img src="assets/expr-excited.svg" alt=""></span><div class="bub"><b>压低声音预告：</b>今晚，它会消化今天所有的例子。图鉴说，幼体吃饱之后，<b>会开口说话</b>。可手册背面还有半行被撕掉的警告，只拼得出四个字：「第一句话……」明天，让它亲口告诉你们。下章：<b>开口章</b>。</div></div>
 </div></section>
 
-<!-- 14 家长卡 -->
+<!-- 15 家长卡 -->
 <section class="slide" data-t="家长卡"><div class="inner">
-  <div class="pcard" style="margin:0"><div class="ph">📮 家长卡 · 第 2 章「喂养日」(课后投屏,家长拍照带走)</div><div class="cols">
-    <div class="col"><h5>正面 · 今天学了什么</h5><p>孩子<b>亲手训练了一个真的 AI</b>(教它认苹果香蕉),并研究了"坏食物事故"——标签放错,AI 就学错;发现了能改回来;喂例子要"多而且不一样",否则它会抓住背景、盘子这类靠不住的捷径。<br><b>亲子问题:</b>「只喂 AI 看白猫,它见到黑猫会怎样?这是谁的责任?」</p></div>
-    <div class="col"><h5>反面 · 家庭任务(二选一,同等完成)</h5><p><b>A 有电脑:</b>打开 teachablemachine.withgoogle.com,<b>让孩子当师傅教您</b>训练认两样东西(只拍普通物品,不拍人脸/姓名/家庭环境)。<br><b>B 无电脑:</b>用 12 张纸卡和孩子一起设计"多样训练集",您故意放一张错标签,让孩子把它揪出来。<br>「今天比的是例子怎么选,不是家里有什么设备。」</p></div>
+  <div class="pcard" style="margin:0"><div class="ph">📮 家长卡 · 第 2 章「喂养日」 · 课后投屏</div><div class="cols">
+    <div class="col"><h5>正面 · 今天学了什么</h5><p>孩子<b>亲手训练了一个真正的 AI</b>：在课件自带的喂养台上收集例子、训练、验收，教它认苹果和香蕉。还做了「坏食物事故」实验：标签放错，它就学错；找到了，也能改回来。例子既要<b>多，也要不一样</b>，否则它会把背景、桌垫当成捷径。<br><b>亲子问题：</b>「如果只给 AI 看白猫，它看到黑猫会怎样？这是谁的责任？」</p></div>
+    <div class="col"><h5>反面 · 家庭任务 · 二选一，同等完成</h5><p><b>A 有电脑或平板：</b>打开今天这页的喂养台，<b>让孩子当驯养师，教您</b>怎样训练它认两样东西。<br><b>B 无设备：</b>用 12 张纸卡做一筐不一样的例子。您故意把一张卡的标签放错，让孩子找出来。<br>⚠️ 禁令在家同样生效：<b>镜头只对准普通物品和干净桌面，不拍人脸、姓名、家庭环境。</b></p></div>
   </div></div>
 </div></section>
 
@@ -152,6 +224,262 @@
   <button class="nav-btn" id="nextB">→</button>
 </div>
 </div>
+
+<script>
+/* ══════════ 喂养台 · 课件自带的真模型 ══════════
+   取样 → 16×16 RGB 特征 → 两类 softmax 回归(浏览器里跑真梯度下降) → 信心条。
+   全程本机内存,不联网、不上传、不落盘;刷新即清空。
+   摄像头不可用时自动切演示模式(内置例子场景),闭环与事故实验照样成立。 */
+const GW=16, GH=16, DIM=GW*GH*3;
+const CLS=[{id:"apple",n:"苹果",e:"🍎",c:"var(--fire)"},{id:"banana",n:"香蕉",e:"🍌",c:"var(--gold)"}];
+const FEED={mode:"demo",stream:null,video:null,
+  demo:{obj:"apple",mat:"white"},
+  samples:{apple:[],banana:[]},
+  hp:{EPOCH:120,LR:.25,L2:.05},
+  model:null,training:false,trained:false,accident:false,
+  view:null,vctx:null,small:null,sctx:null};
+
+/* ── 画布与取景 ── */
+function stnInit(){
+  const c=document.createElement("canvas");
+  c.id="stationCam";c.width=320;c.height=240;
+  FEED.view=c;FEED.vctx=c.getContext("2d",{willReadFrequently:true});
+  const s=document.createElement("canvas");s.width=GW;s.height=GH;
+  FEED.small=s;FEED.sctx=s.getContext("2d",{willReadFrequently:true});
+  syncCam();renderBowls();renderConf();loop();
+}
+function syncCam(){
+  const host=document.querySelector(".slide.on [data-cam]")||document.querySelector("[data-cam]");
+  if(!host)return;
+  if(FEED.view.parentElement!==host){
+    host.innerHTML="";host.appendChild(FEED.view);
+    const bar=document.createElement("div");bar.id="camBar";host.appendChild(bar);
+  }
+  renderCamBar();
+}
+function renderCamBar(){
+  const b=document.getElementById("camBar");if(!b)return;
+  const demo=FEED.mode==="demo";
+  b.innerHTML=`<span class="stn-tag ${demo?"tag-demo":"tag-cam"}">${demo?"🗒 演示模式 · 内置例子":"🔴 摄像头 · 本机现算"}</span>`+
+   (demo?`<div class="stn-sw">${[["apple","🍎"],["banana","🍌"],["pear","🍐"]].map(([k,t])=>`<button class="${FEED.demo.obj===k?"on":""}" onclick="stnObj('${k}')">${t}</button>`).join("")}
+     ${[["white","⬜ 白垫"],["blue","🟦 蓝垫"]].map(([k,t])=>`<button class="${FEED.demo.mat===k?"on":""}" onclick="stnMat('${k}')">${t}</button>`).join("")}
+     <button onclick="stnCamera()">🎥 摄像头</button></div>`
+   :`<div class="stn-sw"><button onclick="stnDemo()">🗒 切演示模式</button></div>`);
+}
+function stnObj(v){FEED.demo.obj=v;renderCamBar();}
+function stnMat(v){FEED.demo.mat=v;renderCamBar();}
+function stnDemo(){if(FEED.stream){FEED.stream.getTracks().forEach(t=>t.stop());FEED.stream=null;}FEED.mode="demo";renderCamBar();}
+async function stnCamera(){
+  try{
+    const st=await navigator.mediaDevices.getUserMedia({video:{width:640,height:480,facingMode:"environment"},audio:false});
+    const v=document.createElement("video");v.srcObject=st;v.muted=true;v.playsInline=true;await v.play();
+    FEED.stream=st;FEED.video=v;FEED.mode="cam";renderCamBar();
+  }catch(e){FEED.mode="demo";renderCamBar();msg(1,"打不开摄像头（没有设备或没给权限）——已留在演示模式，照常上课。");}
+}
+
+/* ── 演示模式:程序画出来的取景(带抖动,每张样本都不一样) ── */
+function drawDemo(ctx,W,H){
+  const j={dx:(Math.random()-.5)*W*.10,dy:(Math.random()-.5)*H*.10,s:.9+Math.random()*.22,r:(Math.random()-.5)*.5,l:Math.random()*.10};
+  ctx.fillStyle=FEED.demo.mat==="blue"?"#7FB3E0":"#EFE9DC";ctx.fillRect(0,0,W,H);
+  ctx.fillStyle=FEED.demo.mat==="blue"?"rgba(255,255,255,.13)":"rgba(160,140,110,.13)";
+  for(let y=0;y<H;y+=14)for(let x=0;x<W;x+=14)ctx.fillRect(x,y,7,7);
+  const cx=W/2+j.dx,cy=H/2+j.dy,R=Math.min(W,H)*.30*j.s;
+  ctx.save();ctx.translate(cx,cy);ctx.rotate(j.r);
+  if(FEED.demo.obj==="apple"){
+    ctx.fillStyle="#D8352B";ctx.beginPath();ctx.ellipse(0,4,R,R*1.02,0,0,7);ctx.fill();
+    ctx.fillStyle="rgba(255,255,255,.30)";ctx.beginPath();ctx.ellipse(-R*.32,-R*.30,R*.22,R*.30,-.5,0,7);ctx.fill();
+    ctx.strokeStyle="#6B4A2A";ctx.lineWidth=R*.11;ctx.beginPath();ctx.moveTo(0,-R*.92);ctx.lineTo(R*.06,-R*1.28);ctx.stroke();
+    ctx.fillStyle="#4C9A44";ctx.beginPath();ctx.ellipse(R*.34,-R*1.16,R*.30,R*.15,-.6,0,7);ctx.fill();
+  }else if(FEED.demo.obj==="banana"){
+    ctx.fillStyle="#F2C230";ctx.beginPath();
+    /* 二次贝塞尔只走到控制点一半:外弧控制点要拉得远,内弧要收得近,否则月牙塌成一条线 */
+    ctx.moveTo(-R*1.05,-R*.30);
+    ctx.quadraticCurveTo(0,R*1.78,R*1.05,-R*.30);
+    ctx.quadraticCurveTo(0,R*.72,-R*1.05,-R*.30);
+    ctx.closePath();ctx.fill();
+    ctx.fillStyle="rgba(255,255,255,.30)";ctx.beginPath();
+    ctx.ellipse(0,R*.50,R*.52,R*.10,0,0,7);ctx.fill();
+    ctx.fillStyle="#7A5A22";ctx.beginPath();ctx.ellipse(-R*1.02,-R*.32,R*.13,R*.10,.5,0,7);ctx.fill();
+    ctx.beginPath();ctx.ellipse(R*1.02,-R*.32,R*.11,R*.09,-.5,0,7);ctx.fill();
+  }else{
+    ctx.fillStyle="#B8CC3E";ctx.beginPath();ctx.ellipse(0,R*.34,R*.80,R*.86,0,0,7);ctx.fill();
+    ctx.beginPath();ctx.ellipse(0,-R*.52,R*.50,R*.56,0,0,7);ctx.fill();
+    ctx.fillStyle="rgba(255,255,255,.26)";ctx.beginPath();ctx.ellipse(-R*.26,R*.20,R*.18,R*.30,-.4,0,7);ctx.fill();
+    ctx.strokeStyle="#6B4A2A";ctx.lineWidth=R*.10;ctx.beginPath();ctx.moveTo(0,-R*1.02);ctx.lineTo(R*.05,-R*1.32);ctx.stroke();
+  }
+  ctx.restore();
+  ctx.fillStyle=`rgba(255,255,255,${j.l})`;ctx.fillRect(0,0,W,H);
+}
+function drawView(){
+  const c=FEED.view,ctx=FEED.vctx,W=c.width,H=c.height;
+  if(FEED.mode==="cam"&&FEED.video&&FEED.video.readyState>=2){
+    const v=FEED.video,vr=v.videoWidth/v.videoHeight,cr=W/H;
+    let sw=v.videoWidth,sh=v.videoHeight,sx=0,sy=0;
+    if(vr>cr){sw=v.videoHeight*cr;sx=(v.videoWidth-sw)/2;}else{sh=v.videoWidth/cr;sy=(v.videoHeight-sh)/2;}
+    ctx.drawImage(v,sx,sy,sw,sh,0,0,W,H);
+  }else drawDemo(ctx,W,H);
+}
+let lastPredict=0;
+function loop(){
+  drawView();
+  const t=performance.now();
+  if(FEED.trained&&t-lastPredict>170){lastPredict=t;renderConf(features());}
+  requestAnimationFrame(loop);
+}
+
+/* ── 特征 ── */
+function features(){
+  FEED.sctx.drawImage(FEED.view,0,0,GW,GH);
+  const d=FEED.sctx.getImageData(0,0,GW,GH).data,x=new Float32Array(DIM);
+  for(let i=0,p=0;i<d.length;i+=4){x[p++]=d[i]/255;x[p++]=d[i+1]/255;x[p++]=d[i+2]/255;}
+  return x;
+}
+function thumb(){const t=document.createElement("canvas");t.width=t.height=26;
+  t.getContext("2d").drawImage(FEED.view,0,0,26,26);return t.toDataURL("image/png");}
+
+/* ── 食盆 ── */
+function renderBowls(){
+  const el=document.getElementById("bowls");if(!el)return;
+  el.innerHTML=CLS.map((c,i)=>`<div class="bowl b${i+1}">
+    <h6><span>${c.e} ${i+1} 号盆 · ${c.n}</span><span class="n" id="cnt-${c.id}">${FEED.samples[c.id].length}</span></h6>
+    <div class="thumbs" id="th-${c.id}"></div>
+    <div class="fd"><button onclick="stnFeed('${c.id}',1)">＋ 喂 1 张</button><button onclick="stnFeed('${c.id}',5)">＋ 喂 5 张</button></div>
+  </div>`).join("");
+  CLS.forEach(c=>paintThumbs(c.id));
+}
+function paintThumbs(id){
+  const t=document.getElementById("th-"+id);if(!t)return;
+  t.innerHTML=FEED.samples[id].slice(-16).map(s=>`<img src="${s.t}" class="${s.bad?"bad":""}" alt="">`).join("");
+  const n=document.getElementById("cnt-"+id);if(n)n.textContent=FEED.samples[id].length;
+}
+function stnFeed(id,k){
+  for(let i=0;i<k;i++){
+    if(FEED.mode==="demo")drawDemo(FEED.vctx,FEED.view.width,FEED.view.height);
+    FEED.samples[id].push({x:features(),t:thumb(),bad:false,from:id});
+  }
+  FEED.trained=false;FEED.model=null;paintThumbs(id);renderConf();
+  msg(1,`已喂 ${total()} 张。喂进去不等于学完——按「让星光网消化」。`);
+}
+const total=()=>CLS.reduce((s,c)=>s+FEED.samples[c.id].length,0);
+
+/* ── 训练:真的 softmax 回归,分帧跑,进度条即实际进度 ── */
+function lockBtns(on){["trainBtn","accBtn","fixBtn"].forEach(id=>{
+  const b=document.getElementById(id);if(b){b.disabled=on;b.style.opacity=on?".45":"";}});}
+function stnTrain(bar,after){
+  if(FEED.training){msg(1,"星光网还在消化，等它走完这一轮。");return;}
+  const X=[],Y=[];
+  CLS.forEach((c,ci)=>FEED.samples[c.id].forEach(s=>{X.push(s.x);Y.push(ci);}));
+  if(X.length<4||CLS.some(c=>FEED.samples[c.id].length<2)){msg(1,"两个食盆各至少喂 2 张，才有得学。");return;}
+  FEED.training=true;FEED.trained=false;lockBtns(true);
+  const W=[new Float32Array(DIM),new Float32Array(DIM)],B=[0,0];
+  /* L2 压住权重,别让信心条一训练就钉死在 100%——留出「有点把握」和「拿不准」的区别 */
+  const {EPOCH,LR,L2}=FEED.hp,barEl=document.getElementById(bar||"trainBar");
+  const T0=performance.now(),DUR=1900;
+  let ep=0;
+  msg(1,"🌌 嘘——星光网正在长……");
+  const step=()=>{
+    /* 按墙钟推进:可见时约 1.9 秒跑完(给课堂一个仪式感的停顿);
+       标签页被切走、setTimeout 被节流时,剩下的轮次一次补齐,绝不半途卡住 */
+    const target=Math.max(1,Math.round(EPOCH*Math.min(1,(performance.now()-T0)/DUR)));
+    while(ep<target){
+      const gW=[new Float32Array(DIM),new Float32Array(DIM)],gB=[0,0];
+      for(let i=0;i<X.length;i++){
+        const x=X[i];let z0=B[0],z1=B[1];
+        for(let d=0;d<DIM;d++){z0+=W[0][d]*x[d];z1+=W[1][d]*x[d];}
+        const m=Math.max(z0,z1),e0=Math.exp(z0-m),e1=Math.exp(z1-m),s=e0+e1;
+        const p=[e0/s,e1/s];
+        for(let c=0;c<2;c++){
+          const g=p[c]-(Y[i]===c?1:0);
+          gB[c]+=g;const gw=gW[c];
+          for(let d=0;d<DIM;d++)gw[d]+=g*x[d];
+        }
+      }
+      const sc=LR/X.length;
+      for(let c=0;c<2;c++){B[c]-=sc*gB[c];const w=W[c],g=gW[c];
+        /* 权重衰减按 LR 缩放,不除以样本数——否则 24 张样本会把 L2 稀释到没有作用 */
+        for(let d=0;d<DIM;d++)w[d]-=sc*g[d]+LR*L2*w[d];}
+      ep++;
+    }
+    if(barEl)barEl.style.width=(ep/EPOCH*100).toFixed(1)+"%";
+    /* 用 setTimeout 而不是 rAF:老师切走窗口(标签页隐藏)时 rAF 会停,训练必须照跑完 */
+    if(ep<EPOCH)setTimeout(step,55);
+    else{FEED.model={W,B};FEED.training=false;FEED.trained=true;lockBtns(false);
+      msg(1,`✅ 消化完成：${X.length} 张例子已经进网。翻页去验收。`);
+      msg(2,"训练好了。先让孩子预测，再举给它看。");
+      renderConf(features());if(after)after();}
+  };
+  setTimeout(step,55);
+}
+function predict(x){
+  if(!FEED.model)return null;
+  const {W,B}=FEED.model;let z0=B[0],z1=B[1];
+  for(let d=0;d<DIM;d++){z0+=W[0][d]*x[d];z1+=W[1][d]*x[d];}
+  const m=Math.max(z0,z1),e0=Math.exp(z0-m),e1=Math.exp(z1-m),s=e0+e1;
+  return [e0/s,e1/s];
+}
+function renderConf(x){
+  const p=x?predict(x):null;
+  ["conf","conf2"].forEach(id=>{
+    const el=document.getElementById(id);if(!el)return;
+    if(!FEED.trained){el.innerHTML=`<div class="stepbox" style="margin:0"><b>还没训练。</b>先回喂养台喂例子，再按「让星光网消化」。</div>`;return;}
+    const top=p?(p[0]>=p[1]?0:1):-1;
+    el.innerHTML=CLS.map((c,i)=>{
+      const v=p?p[i]:0;
+      return `<div class="row ${top===i?"win":""}"><span class="lb">${c.e} ${c.n}</span><span class="bar"><i style="width:${(v*100).toFixed(1)}%;background:${c.c}"></i></span><span class="v">${(v*100).toFixed(0)}%</span></div>`;
+    }).join("");
+  });
+}
+function msg(n,t){const e=document.getElementById("stnMsg"+n);if(e)e.textContent=t;}
+
+/* ── 坏食物事故 / 善后 ── */
+function stnAccident(){
+  if(!FEED.model){msg(3,"先把毛球喂好、训练过，才谈得上事故。");return;}
+  if(FEED.training){msg(3,"星光网还在消化，等一下再丢。");return;}
+  const moved=FEED.samples.apple.filter(s=>!s.bad).slice(-5);
+  if(!moved.length){msg(3,"苹果食盆已经空了——先按「把坏例子放回原食盆」。");return;}
+  moved.forEach(s=>{s.bad=true;
+    FEED.samples.apple.splice(FEED.samples.apple.indexOf(s),1);
+    FEED.samples.banana.push(s);});
+  FEED.accident=true;CLS.forEach(c=>paintThumbs(c.id));
+  const bad=FEED.samples.banana.filter(s=>s.bad).length;
+  msg(3,`又丢了 ${moved.length} 张，香蕉食盆里现在有 ${bad} 张贴错标签的苹果。重训中……`);
+  stnTrain("trainBar2",()=>msg(3,`重训完了（坏例子 ${bad} 张）。举苹果给它看，照屏幕念。没翻就再丢 5 张，让全班看着信心条一路走下去。`));
+}
+function stnRepair(){
+  if(FEED.training){msg(3,"星光网还在消化，等一下再修。");return;}
+  if(!FEED.accident){msg(3,"现在没有坏例子。");return;}
+  const back=FEED.samples.banana.filter(s=>s.bad);
+  back.forEach(s=>{s.bad=false;
+    FEED.samples.banana.splice(FEED.samples.banana.indexOf(s),1);
+    FEED.samples.apple.push(s);});
+  FEED.accident=false;CLS.forEach(c=>paintThumbs(c.id));
+  msg(3,`${back.length} 张放错的例子已归位。重训中……`);
+  stnTrain("trainBar2",()=>msg(3,"事故修复。标签放错不可怕，能发现、能改回来才是好驯养师。"));
+}
+function stnReset(){
+  if(!confirm("清空喂养台里的所有例子？"))return;
+  FEED.samples={apple:[],banana:[]};FEED.model=null;FEED.trained=false;FEED.accident=false;
+  const b=document.getElementById("trainBar"),b2=document.getElementById("trainBar2");
+  if(b)b.style.width="0";if(b2)b2.style.width="0";
+  renderBowls();renderConf();msg(1,"喂养台已清空。");msg(2,"");msg(3,"");
+}
+
+/* ── 翻页门禁 ── */
+window.deckCanGo=({to})=>{
+  if(window.__gateOff)return {ok:true};
+  const iT=window.deckIndexOf?deckIndexOf("喂养台:测验"):10;
+  if(to>=iT&&to<=iT+1&&!FEED.trained&&!FEED.model)
+    return {ok:false,message:total()<4?"喂养台还空着——两个盆各喂几张，再让星光网消化":"例子喂进去了，先按「让星光网消化」"};
+  return {ok:true};
+};
+stnInit();
+</script>
 <script src="js/slides.js?v=4"></script>
+<script>
+/* 翻页后把取景框搬到当前页(所有翻页入口都会触发) */
+new MutationObserver(()=>{syncCam();renderConf(FEED.trained?features():null);})
+  .observe(document.querySelector(".deck"),{subtree:true,attributes:true,attributeFilter:["class"]});
+syncCam();
+</script>
 </body>
 </html>
