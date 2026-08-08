@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Ch.1 Egg Chapter -- Hatching Day</title>
+<link rel="stylesheet" href="css/course.css?v=4">
+<style>
+body{font-family:system-ui,-apple-system,"Segoe UI",Helvetica,Arial,sans-serif}
+.qcard{max-width:440px;margin:0 auto;background:#EAF3FC;border:3px solid var(--ink);border-radius:20px;
+  box-shadow:inset 0 0 0 8px #9CC8EE,var(--sh);padding:14px 20px 18px;text-align:center}
+.qcard .em{font-size:clamp(56px,9vw,84px);line-height:1.05}
+.qcard .pl{font-weight:900;font-size:13px;letter-spacing:.14em;color:var(--water);text-transform:uppercase}
+.qcard .qhint{font-size:13px;font-weight:700;color:var(--sub);margin-top:6px}
+.qcard .ask{margin-top:10px;font-size:15px;padding:10px 18px;animation:qpulse 1.3s ease-in-out infinite}
+@keyframes qpulse{0%,100%{transform:none}50%{transform:translateY(-4px)}}
+.qcard .stamp{display:inline-block;margin-top:10px;font-weight:900;font-size:19px;color:#C0392B;
+  border:3px solid #C0392B;border-radius:12px;padding:5px 14px;background:#fff;transform:rotate(-2.5deg)}
+</style>
+</head>
+<body>
+<div class="deck">
+<div class="deck-top">
+  <a class="home" href="index.html"><img src="assets/egg.svg" alt="">Familiar Keeper's Handbook</a>
+  <span class="chap">Ch.1 . Egg . Hatching Day</span>
+  <a class="fs" href="lesson-1.html" style="text-decoration:none;color:var(--ink);margin-left:8px">中文</a>
+  <span class="pg" id="pg"></span>
+  <button class="fs" id="fsB">⛶ Full F</button>
+</div>
+<!-- 1 Cover -->
+<section class="slide" data-t="Cover"><div class="inner cover">
+  <span class="kicker">Ch.1 · The Egg · 90 min (incl. 10' break)</span>
+  <h1>Hatching Day</h1>
+  <div class="sub-en">Trial . Hatch . Name it</div>
+  <img class="chapimg" src="assets/egg.svg" alt="Familiar egg">
+  <p class="lead">A <b>glowing egg</b> and a recruitment letter turn up in class. An AI familiar sleeps inside. Only a class that clears <b>three Trials</b> wakes it.</p>
+  <div class="chips" style="justify-content:center"><span class="chip hot">Badge: Keen Eye</span><span class="chip">English: AI · pattern · learn</span></div>
+</div></section>
+
+<!-- 2 Teacher's Hidden Card -->
+<section class="slide" data-t="Teacher's Card"><div class="inner">
+  <div class="secret" style="margin:0"><span class="tag">Teacher's Hidden Card · read alone. Never project.</span>
+    <ul><li><b>Real goals.</b> ① Today's AI = a program that sees many examples and finds its own patterns. Man-made tool. Not magic, not alive. ② It senses through sensors: <b>what it never saw or learned, it can only guess -- never fake knowing.</b> ③ <b>Narrow examples grow fake rules. Only new samples catch them</b> (core activity: The Plate Secret, the six-step loop on paper).</li>
+    <li><b>Paper simulation.</b> Fluff answers by one hidden rule in the deck. It drills the <b>order of an experiment</b> -- no live model is trained here (that is Ch.2). Gates: no challenge until trained, no advancing until done. Backdoor = 🔓 on the challenge page.</li>
+    <li>Must know <b>AI / pattern / learn</b>; heard once: <b>sensor</b>. Prep: iPads bookmarked to autodraw.com + quickdraw.withgoogle.com (try both yourself), opaque lens cap, dimmable lights.</li>
+    <li><b>Demo discipline, all 5 chapters.</b> It works -> observe, name, explain. It fails -> say so plainly, ask "why this time", switch to the recording. <b>Never fake what the screen did not show.</b></li></ul>
+  </div>
+</div></section>
+
+<!-- 3 Roadmap -->
+<section class="slide" data-t="Roadmap"><div class="inner">
+  <div class="shead"><h2>⏱ Chapter roadmap</h2></div>
+  <div class="tl">
+    <div class="tl a" style="cursor:default"><span class="tt" style="background:var(--story)">Story</span><b>0-10' Glowing egg &amp; letter</b></div>
+    <div class="tl a" style="cursor:default"><span class="tt" style="background:var(--study)">Codex</span><b>10-20' Which familiar is inside</b></div>
+    <div class="tl a" style="cursor:default"><span class="tt" style="background:var(--trial)">Trial 1</span><b>20-33' Puppet &amp; familiar</b></div>
+    <div class="tl a" style="cursor:default"><span class="tt" style="background:var(--study)">Codex</span><b>33-40' Magic Eye &amp; Ear</b></div>
+    <div class="tl a" style="cursor:default"><span class="tt" style="background:var(--break)">Break</span><b>40-50' Hatching workout</b></div>
+    <div class="tl a" style="cursor:default"><span class="tt" style="background:var(--trial)">Trial 2</span><b>50-64' The Plate Secret</b></div>
+    <div class="tl a" style="cursor:default"><span class="tt" style="background:var(--trial)">Trial 3</span><b>64-76' Keen Eye Arena</b></div>
+    <div class="tl a" style="cursor:default"><span class="tt" style="background:var(--rite)">Rite</span><b>76-86' Hatching Rite + badges</b></div>
+    <div class="tl a" style="cursor:default"><span class="tt" style="background:var(--eng)">English</span><b>86-90' English + next time</b></div>
+  </div>
+</div></section>
+
+<!-- 4 Format Card -->
+<section class="slide" data-t="Format Card"><div class="inner">
+  <div class="shead"><h2>👥 Class format card (pick before class)</h2></div>
+  <div class="tbwrap" style="margin:0"><table class="tb">
+    <tr><th>Activity</th><th>1-on-1</th><th>2-8 kids</th><th>9+ kids</th></tr>
+    <tr><td>Opening question</td><td>Kid says or draws a guess. Record verbatim.</td><td colspan="2">Every answer on the whiteboard. No judging.</td></tr>
+    <tr><td>Puppet &amp; familiar</td><td>Same kid plays both (see 👤)</td><td>Two teams, swap once</td><td>Two teams, one rep each</td></tr>
+    <tr><td>The Plate Secret</td><td>Kid makes every key click</td><td colspan="2">Hand vote each step, one kid clicks. Keep disagreements.</td></tr>
+    <tr><td>Hatching Rite</td><td>Call and response, kid taps the egg</td><td colspan="2">Class chants three lines, teacher taps</td></tr>
+  </table></div>
+</div></section>
+
+<!-- 5 Story open -->
+<section class="slide" data-t="Story: Egg"><div class="inner">
+  <div class="shead"><span class="time">0-10'</span><span class="type t-story">Story event</span><h2>The glowing egg and the letter</h2></div>
+  <span class="evtag ev-play">🎭 Story scene</span>
+  <div class="act">Lights half down. No intro. No "today's lesson." Drop your voice and open cold.</div>
+  <div class="say"><span class="who">T</span><div class="bub">Shh. Not a sound. You see the egg too, right? It wasn't here last night. This morning it was lying there, glowing -- with a letter under it.</div></div>
+  <div class="solo">Each kid says or draws one guess: what is AI? Write it down word for word. <b>Say:</b> "No right answer yet. After it hatches we check if you levelled up."</div>
+</div></section>
+
+<!-- 6 The Letter -->
+<section class="slide" data-t="The Letter"><div class="inner">
+  <div class="big" style="font-size:clamp(22px,3.6vw,34px)">To the whole class:<br>An <b style="color:#FFB25E">AI familiar</b> sleeps in this egg.<br>It is waiting for real <b style="color:#FFB25E">Tamers</b>.<br>Three Trials today.<br>Clear the last one and the shell cracks open.<br><small>-- The Tamers' Guild</small></div>
+  <div class="say"><span class="who">T</span><div class="bub">Hands up if you want it to hatch. Good -- Trial 1 starts now: <b>if you don't know what it is, what right do you have to tame it?</b> So tell me: what is AI? Every answer on the whiteboard. No judging.</div></div>
+</div></section>
+
+<!-- 7 Codex 1 -->
+<section class="slide" data-t="Puppet or Familiar"><div class="inner">
+  <div class="shead"><span class="time">10-20'</span><span class="type t-study">Codex Study ①</span><h2>Which familiar is inside</h2></div>
+  <div class="grid g2">
+    <div class="card" style="margin:0;text-align:center;border-left:8px solid var(--sub)"><div style="font-size:40px">⚙️</div><h4 style="font-weight:900">Clockwork Puppet</h4><p style="font-size:14px;margin-top:6px">Every step carved in advance: the music box plays one tune, the microwave runs the minutes you set. <b>It repeats forever and learns nothing new.</b></p></div>
+    <div class="card" style="margin:0;text-align:center;border-left:8px solid var(--orange)"><div style="font-size:40px">🥚✨</div><h4 style="font-weight:900">Learning Familiar</h4><p style="font-size:14px;margin-top:6px">Nobody carves rules. Show it <b>thousands of examples</b> and it finds the pattern itself. <b>Capable -- but what the examples missed, it guesses, and never blushes.</b></p></div>
+  </div>
+  <div class="say"><span class="who">T</span><div class="bub">Today: the commonest kind -- <b>an AI that finds patterns in examples</b>. Not empty-headed. But what it never saw, it can only guess.</div></div>
+  <div class="chips"><span class="chip">Music box? Puppet</span><span class="chip">Voice assistant? Familiar</span><span class="chip">Lift? Puppet</span><span class="chip">Photos naming family? Familiar</span></div>
+</div></section>
+
+<!-- 8 Codex warning -->
+<section class="slide" data-t="Codex Warning"><div class="inner">
+  <div class="big" style="font-size:clamp(24px,4vw,38px)">Codex warning:<br>"A familiar is very capable.<br>What it says is not always true."<small>This line comes back in every chapter</small></div>
+</div></section>
+
+<!-- 9 Trial 1 -->
+<section class="slide" data-t="Trial 1"><div class="inner">
+  <div class="shead"><span class="time">20-33'</span><span class="type t-trial">Trial 1</span><h2>Puppet &amp; familiar (unplugged)</h2></div>
+  <div class="grid g2">
+    <div class="card" style="margin:0"><h4 style="font-weight:900">🅰 Puppet round</h4><p style="font-size:14.5px">Take the cue card. <b>Follow it exactly. No variation.</b> Then give a signal that isn't on it: two taps, left shoulder. The puppet checks and answers <b>"Not on the card."</b></p></div>
+    <div class="card" style="margin:0"><h4 style="font-weight:900">🅱 Familiar round</h4><p style="font-size:14.5px">No card. Watch each move demoed <b>twice</b>, then copy from the examples. End on that same <b>never-shown signal</b>.</p></div>
+  </div>
+  <div class="big">Left shoulder -> right hand ✋ · Right shoulder -> stand 🧍<br>Head -> spin 🔄 · High-five -> squat ⬇️<br><small>Hidden test: two taps, left shoulder = ??? Nobody taught it.</small></div>
+  <div class="say"><span class="who">T</span><div class="bub">All three outcomes are fine. Wrong: "Examples mean guessing wrong sometimes." Right but unsure: "You guessed. So does it." All right: "Sharp eyes -- no promise you never slip." Then the new signal: <b>no example means guess, or say "never seen it".</b> Trial 1 passed!</div></div>
+  <div class="solo">Same kid does both rounds: you call from the card, then demo each move twice. Both end on two taps, left shoulder.</div>
+</div></section>
+
+<!-- 10 Codex 2 -->
+<section class="slide" data-t="Magic Eye &amp; Ear"><div class="inner">
+  <div class="shead"><span class="time">33-40'</span><span class="type t-study">Codex Study ②</span><h2>Magic Eye and Magic Ear</h2></div>
+  <div class="say"><span class="who">T</span><div class="bub">A familiar has no eyes and no ears. It uses a <b>Magic Eye</b> (camera) and a <b>Magic Ear</b> (mic). The Codex calls both <b>sensor</b>.</div></div>
+  <div class="act">Cap the iPad camera. Ask: "Still see cloth or shadow?" Land it: <b>not "nothing" -- the camera is just getting very little.</b> We covered the Eye only; the Ear may still listen. Link: why won't the lift door pinch you?</div>
+  <div class="big">What it was not shown, it can only guess.<small>You decide what it sees and hears. Big power, big responsibility.</small></div>
+  <div class="rule">Tamer rule one: <b>Magic Eye and Magic Ear -- ask an adult first, switch off after.</b></div>
+</div></section>
+
+<!-- 11 Break -->
+<section class="slide" data-t="Break"><div class="inner">
+  <div class="shead"><span class="time">40-50'</span><span class="type t-break">Break</span><h2>Hatching workout</h2></div>
+  <p style="font-size:16px">Trial 1's cues as a whole-body drill. You call, they follow (<b>puppet mode</b>). Last two rounds: no calls, memory only (<b>familiar mode</b>).</p>
+  <div class="say mq"><span class="who"><img src="assets/egg.svg" alt=""></span><div class="bub">(The glow just got a little brighter... it can feel you.)</div></div>
+</div></section>
+<!-- 12 Plate Secret (feed) -->
+<section class="slide" data-t="Plate Secret"><div class="inner">
+  <div class="shead"><span class="time">50-64'</span><span class="type t-trial">Trial 2</span><h2>The Plate Secret: Feed 10 Memories</h2></div>
+  <span class="evtag ev-rec">🗒 Paper sim. Fluff answers by one hidden rule</span>
+  <div class="say"><span class="who">T</span><div class="bub"><b>Say:</b> "Fluff's first skill is knowing fruit. These are <b>training cards, not a test</b>. Name the food, flip the label, it's fed." <b>10 fed -> digest -> the gate opens.</b></div></div>
+  <div class="result-line" style="text-align:center">Training book <span id="feedCount">0</span> / 10</div>
+  <div class="grid g5" id="trainCards" style="gap:10px"></div>
+  <div id="trainZone" style="text-align:center;margin-top:10px"></div>
+  <p style="text-align:center;margin-top:8px">
+    <button class="btn alt" style="font-size:12.5px;padding:6px 14px" onclick="teacherNote()">👩‍🏫 Teacher note</button>
+    <button class="btn alt" style="font-size:12.5px;padding:6px 14px" onclick="resetPlateLoop()">↺ Reset trial 2</button>
+  </p>
+  <div id="tNote" style="display:none" class="act">Teacher only. Do not project. The cards hide a plate shortcut: fruit on red, non-fruit on blue. <b>Do NOT reveal it.</b> Child spots it early: "You found what the cards share. Don't call it Fluff's rule yet. Wait for evidence." Child mislabels: "Flip the real label. Fluff is fed checked labels only."</div>
+</div></section>
+
+<!-- 13 Banana challenge (state machine) -->
+<section class="slide" data-t="Banana Challenge"><div class="inner">
+  <div class="shead"><span class="type t-trial">Challenge Gate</span><h2>Banana on a Blue Plate</h2></div>
+  <span class="evtag ev-rec">🗒 One step at a time. Lock the prediction before the reveal</span>
+  <div id="quizCard"></div>
+  <div id="receipts"></div>
+  <div id="curStep"></div>
+  <p style="text-align:center;margin-top:8px">
+    <button class="btn alt" style="font-size:12.5px;padding:6px 14px" onclick="resetPlateLoop()">↺ Reset trial 2</button>
+    <button class="btn alt" style="font-size:12.5px;padding:6px 14px" onclick="gateOff()">🔓 Teacher skip</button>
+  </p>
+</div></section>
+<!-- 14 Break the fake rule (completion gate) -->
+<section class="slide" data-t="Fake Rule Broken"><div class="inner">
+  <div class="big" style="font-size:clamp(20px,3.2vw,30px)">❌ Red plate = fruit? Wrong.<br>It only <b style="color:#FFB25E">happened to fit</b> those first ten cards.<br><br>🌈 The one line to take home:<br><b style="color:#FFB25E">Narrow examples grow fake rules.<br>New samples catch them.</b><small>Trial 2 passed!</small></div>
+  <div class="say"><span class="who">T</span><div class="bub">On paper-Fluff we drilled the six steps that catch a shortcut: <b>Feed, Train, Test, Diagnose, Fix, Retest</b>. Next chapter trains a real model -- screen evidence only.</div></div>
+</div></section>
+
+<!-- 15 Trial 3 -->
+<section class="slide" data-t="Trial 3"><div class="inner">
+  <div class="shead"><span class="time">64-76'</span><span class="type t-trial">Trial 3</span><h2>Keen Eye Arena</h2></div>
+  <span class="evtag ev-rec">📼 Saved recording · required</span><span class="evtag ev-live">🔴 Outside site · bonus</span>
+  <div class="card" style="margin:0 0 12px">
+    <h4 style="font-weight:900">Main line: three saved guess-the-drawing runs</h4>
+    <p style="font-size:14.5px;line-height:2">🖌 Two circles... "Glasses?" -> add whiskers... "Cat!" ✓ (millions drew that shape)<br>🖌 A circle... "Sun?" -> add waves... "Cloud?" -> add a sail... "Boat!" ✓ (revised twice)<br>🖌 A very odd cat... "Snail?" -> "Don't recognise it" ✗ (<b>too unlike any cat in its examples</b>)</p>
+  </div>
+  <div class="card" style="margin:0"><h4 style="font-weight:900">Bonus: live site, 3 min, network permitting</h4><p style="font-size:14px">AutoDraw: draw anything, watch it guess. Quick Draw!: <b>it sets the prompt -- draw what it deals.</b> <b>Say:</b> "We can't control what it deals, so it's bonus. Network down? The recordings still finish the Trial."</p><div class="chips" style="margin-top:6px"><span class="chip">autodraw.com</span><span class="chip">quickdraw.withgoogle.com</span></div></div>
+</div></section>
+
+<!-- 16 Hatching Rite -->
+<section class="slide" data-t="Hatching Rite"><div class="inner">
+  <div class="shead"><span class="time">76-86'</span><span class="type t-rite">Hatching Rite</span><h2>Three Trials cleared. Wake it!</h2></div>
+  <div class="chips" style="justify-content:center"><span class="chip hot">① It learns from examples!</span><span class="chip hot">② Narrow examples teach it wrong!</span><span class="chip hot">③ New samples catch it!</span></div>
+  <div class="stage-box" id="hatchBox">
+    <div class="confetti" id="conf1"></div>
+    <h3 id="hatchTitle">Familiar Egg</h3>
+    <div class="halo"><img id="hatchImg" src="assets/egg.svg" alt="Egg"></div>
+    <p id="hatchHint" style="font-size:14px;opacity:.85">Chant the three lines -> count down 3, 2, 1 -> tap the egg</p>
+    <p style="margin-top:12px"><button class="btn" id="hatchBtn">🐣 Hatch!</button></p>
+  </div>
+</div></section>
+
+<!-- 17 Codex Truth + badge -->
+<section class="slide" data-t="Codex Truth"><div class="inner">
+  <div class="say mq"><span class="who"><img src="assets/juvenile.svg" alt=""></span><div class="bub">Its name is <b>Fluff</b>! Every Tamer here just hatched one. Write your Fluff's name on the whiteboard.</div></div>
+  <div class="big">Codex Truth · whole class, out loud · every chapter<br>"A familiar is really a man-made computer program that learns.<br>Not an animal. Not magic. No heart.<br>Knowing that and still playing the part -- that is a master Tamer."</div>
+  <div class="act">Back to the opening whiteboard: "Who came closest? All of you levelled up." Award the Keen Eye Badge one by one and <b>name the reason</b>: "Not for being right -- for catching that narrow examples taught Fluff wrong."</div>
+  <div class="badges"><div class="badge on"><div class="coin">👁</div><b>Keen Eye</b><small>L1 · earned</small></div><div class="badge"><div class="coin">🍎</div><b>Feeding</b><small>L2</small></div><div class="badge"><div class="coin">🔍</div><b>Truth-Sifter</b><small>L3</small></div><div class="badge"><div class="coin">📜</div><b>Pact</b><small>L4</small></div><div class="badge"><div class="coin">⚔️</div><b>Battle</b><small>L5</small></div></div>
+</div></section>
+
+<!-- 18 English + next time -->
+<section class="slide" data-t="English + Next"><div class="inner">
+  <div class="shead"><span class="time">86-90'</span><span class="type t-eng">English + next time</span><h2>Three words to take home</h2></div>
+  <div class="big">AI · pattern · learn<br><small>AI learns patterns from examples!</small></div>
+  <div class="say mq"><span class="who"><img src="assets/juvenile.svg" alt=""></span><div class="bub"><b>Next time:</b> a juvenile familiar gets <b>hungry</b>. And it eats strange things -- not rice, not meat, not even sweets. When it howls tomorrow, will you dare feed it? Chapter 2: <b>Feeding Day</b>.</div></div>
+</div></section>
+
+<!-- 19 Parent card -->
+<section class="slide" data-t="Parent Card"><div class="inner">
+  <div class="pcard" style="margin:0"><div class="ph">📮 Parent card · Ch.1 Hatching Day</div><div class="cols">
+    <div class="col"><h5>Front · today</h5><p>The class hatched Fluff, an AI familiar. Behind the story: AI learns by finding patterns in masses of examples. Man-made, and it does get things wrong. <b>Narrow examples breed fake rules</b>: today's paper-Fluff decided "red plate" meant fruit. Only new samples caught it.<br><b>Family task:</b> have them name the six steps -- Feed, Train, Test, Diagnose, Fix, Retest.</p></div>
+    <div class="col"><h5>Back · home game</h5><p><b>Familiar census:</b> count the familiars hiding at home -- voice assistant, photo face-tagging, video recommendations.<br>⚠️ "Is Fluff alive?" -> "No. A man-made program that learns. We're playing a game." Camera and mic: ask an adult first, switch off after.</p></div>
+  </div></div>
+</div></section>
+
+<div class="deck-bar">
+  <button class="nav-btn" id="prevB">←</button>
+  <div class="dots" id="dots"></div>
+  <button class="nav-btn" id="nextB">→</button>
+</div>
+</div>
+
+<script>
+/* ══════════ The Plate Secret . paper-simulation state machine ══════════
+   Invariants: train / repair / hold-out sets stay separate; four fields kept apart
+   (child answer, real label, Fluff prediction, Fluff output); first answer is never erased;
+   prediction locks before reveal; fed != retrained; retest uses unseen items, one hand-in only;
+   completion comes from a predicate; every page turn shares the deckCanGo gate. */
+const TRAIN_BASE=[
+ {id:"t1",e:"🍎",n:"apple",plate:"r",truth:"fruit"},{id:"t2",e:"🍞",n:"bread",plate:"b",truth:"not"},
+ {id:"t3",e:"🍓",n:"strawberry",plate:"r",truth:"fruit"},{id:"t4",e:"🧀",n:"cheese",plate:"b",truth:"not"},
+ {id:"t5",e:"🍊",n:"orange",plate:"r",truth:"fruit"},{id:"t6",e:"🥚",n:"egg",plate:"b",truth:"not"},
+ {id:"t7",e:"🍇",n:"grapes",plate:"r",truth:"fruit"},{id:"t8",e:"🍚",n:"rice",plate:"b",truth:"not"},
+ {id:"t9",e:"🍐",n:"pear",plate:"r",truth:"fruit"},{id:"t10",e:"🍰",n:"cake",plate:"b",truth:"not"}];
+const REPAIR_SET=[{id:"rp1",e:"🍌",n:"banana",plate:"b",truth:"fruit"},{id:"rp2",e:"🍰",n:"cake",plate:"r",truth:"not"}];
+const HOLDOUT_SET=[
+ {id:"h1",e:"🍉",n:"melon",plate:"b",truth:"fruit"},{id:"h2",e:"🍉",n:"melon",plate:"r",truth:"fruit"},
+ {id:"h3",e:"🥛",n:"milk",plate:"b",truth:"not"},{id:"h4",e:"🥛",n:"milk",plate:"r",truth:"not"}];
+const QUIZ={e:"🍌",n:"banana",plate:"b"};
+const PHASES=["FEED","READY_TRAIN","TRAINED","HUMAN","PREDICT","REVEAL","DIAG","REPAIR_HYP","REPAIR_FEED","READY_RETRAIN","RETRAINED","POST_PREDICT","HOLDOUT","LOCKED","REVEALED","DONE"];
+const SKEY="l1en.plateLoop.v2";
+const init=()=>({v:2,phase:"FEED",fed:[],humanFirst:null,humanFinal:null,predict:null,asked:false,diagTries:0,repairTries:0,repairFed:[],postPredict:null,holdT:{},holdFinal:{},complete:false});
+function loadState(){try{const s=JSON.parse(sessionStorage.getItem(SKEY));if(s&&s.v===2&&PHASES.includes(s.phase)&&Array.isArray(s.fed))return s;}catch(e){}return init();}
+let S=loadState();
+function save(){S.complete=isComplete(S);sessionStorage.setItem(SKEY,JSON.stringify(S));}
+function isComplete(s){return s.fed.length===10&&PHASES.indexOf(s.phase)>=PHASES.indexOf("DONE")&&s.humanFirst!==null&&s.predict!==null&&s.repairFed.length===2&&HOLDOUT_SET.every(h=>s.holdFinal[h.id]);}
+function paperFluff(card,retrained){return retrained?(card.truth==="fruit"?"fruit":"not"):(card.plate==="r"?"fruit":"not");}
+const lab=v=>v==="fruit"?"Fruit":"Not fruit";
+function pv(s){return PHASES.indexOf(s.phase);}
+
+/* ── feed page ── */
+function renderTrain(){
+  const grid=document.getElementById("trainCards");
+  grid.innerHTML=TRAIN_BASE.map(c=>`<div class="flip plate-${c.plate}${S.fed.includes(c.id)?" go":""}" onclick="feedTrain('${c.id}',this)"><div class="in"><div class="f">${c.e}<small>${c.n}</small></div><div class="b ${c.truth==="fruit"?"ok":"no"}">${c.truth==="fruit"?"Fruit!":"Not!"}</div></div></div>`).join("");
+  document.getElementById("feedCount").textContent=S.fed.length;
+  const z=document.getElementById("trainZone");
+  if(S.phase==="FEED"&&S.fed.length===10){S.phase="READY_TRAIN";save();}
+  if(S.phase==="FEED")z.innerHTML=`<p style="font-weight:700;color:var(--sub)">In the book is not yet a rule.</p>`;
+  else if(S.phase==="READY_TRAIN")z.innerHTML=`<button class="btn" onclick="startTrain()">🍽 Let Fluff digest the 10</button>`;
+  else z.innerHTML=`<p class="result-line ok-line">✅ Trained. 10 memories stored. It grew one hidden rule -- we don't know which. Gate open. Turn the page.</p>`;
+}
+function feedTrain(id,el){if(pv(S)>PHASES.indexOf("READY_TRAIN"))return; if(!S.fed.includes(id)){S.fed.push(id);el.classList.add("go");save();renderTrain();}else{el.classList.add("go");}}
+function startTrain(){const z=document.getElementById("trainZone");z.innerHTML=`<p class="result-line">🌌 Fluff is looking for what they share...</p>`;setTimeout(()=>{S.phase="HUMAN";save();renderTrain();renderChallenge();},1500);}
+
+/* ── the blue card: this is what Fluff answers ── */
+function renderQuizCard(){
+  const el=document.getElementById("quizCard");if(!el)return;
+  const i=pv(S);
+  if(i<PHASES.indexOf("HUMAN")){el.innerHTML="";return;}
+  let foot;
+  if(S.phase==="HUMAN")foot=`<p class="qhint">Tamers answer first. Fluff waits.</p>`;
+  else if(S.phase==="PREDICT")foot=`<p class="qhint">Lock your prediction. Then the card goes to Fluff.</p>`;
+  else if(S.phase==="REVEAL"&&!S.asked)foot=`<button class="btn ask" onclick="askFluff()">🐣 Put the card in front of Fluff</button>`;
+  else foot=`<div class="stamp">Fluff: Not fruit ✗</div>`;
+  el.innerHTML=`<div class="qcard"><div class="pl">🔵 Blue plate</div><div class="em">${QUIZ.e}</div><div class="pl" style="color:var(--ink)">${QUIZ.n}</div>${foot}</div>`;
+}
+function askFluff(){if(S.phase!=="REVEAL"||S.asked)return;S.asked=true;save();renderQuizCard();renderChallenge();}
+
+/* ── challenge page: render only the current step + receipts ── */
+function receipt(t){return `<div class="stepbox" style="padding:8px 14px;font-size:13.5px;opacity:.82">✅ ${t}</div>`;}
+function renderChallenge(){
+  const R=document.getElementById("receipts"),C=document.getElementById("curStep");
+  const note=S.note?`<div class="rule">${S.note}</div>`:"";S.note=null;
+  renderQuizCard();
+  const r=[],p=S.phase,i=pv(S);
+  if(i>=PHASES.indexOf("HUMAN")&&S.humanFirst)r.push(receipt(`Tamers' first answer: ${lab(S.humanFirst)}${S.humanFinal&&S.humanFinal!==S.humanFirst?" -> checked: "+lab(S.humanFinal):""} (first answer is permanent)`));
+  if(i>=PHASES.indexOf("REVEAL")&&S.predict)r.push(receipt(`Prediction locked: ${S.predict==="food"?"it reads the food":S.predict==="plate"?"it reads the plate":"can't tell yet"}`));
+  if(i>PHASES.indexOf("REVEAL"))r.push(receipt(`Fluff's answer: Not fruit ✗ (wrong)`));
+  if(i>PHASES.indexOf("DIAG"))r.push(receipt(`Diagnosed: on the 10 cards, "food" and "plate" both score 10/10. A training score can't expose the fake rule.`));
+  if(i>PHASES.indexOf("REPAIR_FEED")||S.repairFed.length===2)r.push(receipt(`Counter-examples fed: blue banana = fruit, red cake = not (old plate rule drops to 10/12)`));
+  if(i>=PHASES.indexOf("POST_PREDICT")&&i>PHASES.indexOf("RETRAINED"))r.push(receipt(`Retrained on all 12`));
+  if(i>=PHASES.indexOf("REVEALED")&&p!=="HOLDOUT"&&p!=="LOCKED")r.push(receipt(`Hold-out retest: 4 new papers handed in`));
+  R.innerHTML=r.join("");
+  let h="";
+  if(p==="FEED"||p==="READY_TRAIN"){C.innerHTML=`<div class="stepbox"><h5>Gate shut</h5><p>Go back one page. Feed all 10 cards, then let Fluff digest.</p></div>`;return;}
+  switch(p){
+  case "TRAINED": S.phase="HUMAN";save();return renderChallenge();
+  case "HUMAN":
+    h=`<div class="stepbox"><h5>① Tamers answer first. Look at the FOOD, not the plate.</h5>
+    <p style="font-size:14px"><b>Say:</b> "This is not a test of you. Answer honestly. First answers are kept."</p>
+    <div class="vote" style="justify-content:center"><button class="btn" onclick="ansHuman('fruit')">Fruit</button><button class="btn alt" onclick="ansHuman('not')">Not fruit</button><button class="btn alt" onclick="ansHuman('unsure')">Not sure</button></div></div>`;break;
+  case "PREDICT":
+    h=`<div class="stepbox"><h5>② New question: how will <b>Fluff</b> answer this card?</h5>
+    <p style="font-size:14px">Its 10 memories: fruit was always on red. Did it learn <b>the food</b> or <b>the plate</b>?</p>
+    <p style="font-size:13px;color:var(--sub)"><b>Lock it in. No changing after the reveal.</b></p>
+    <div class="vote" style="justify-content:center"><button class="btn" onclick="lockPredict('food')">It reads the food</button><button class="btn" style="background:var(--myst)" onclick="lockPredict('plate')">It reads the plate</button><button class="btn alt" onclick="lockPredict('unsure')">Can't tell yet</button></div></div>`;break;
+  case "REVEAL":{
+    if(!S.asked){h=`<div class="stepbox"><h5>③ Hand the blue card to Fluff</h5>
+    <p style="font-size:14px"><b>Say:</b> "Predictions are locked. Eyes on the card. Nobody speaks."</p>
+    <p style="font-size:14px"><b>Click the blue card above.</b> Fluff answers on it.</p></div>`;break;}
+    const fb=S.predict==="food"?"You predicted FOOD. The result <b>disagrees</b>. Don't patch your explanation. Go get evidence.":S.predict==="plate"?"You predicted PLATE. The result <b>agrees</b>. One wrong answer still isn't proof. Line up all 10 cards.":"You said the evidence wasn't enough. That is science. Here is clue one. Now read the full training record.";
+    h=`<div class="stepbox"><h5>③ Fluff answered. Behavior only -- no reasons yet.</h5>
+    <p class="result-line bad-line" style="text-align:center;font-size:22px">Fluff: Not fruit ✗</p>
+    <p style="font-size:14px">${fb}</p>
+    <p style="text-align:center"><button class="btn" style="background:var(--book)" onclick="openLens()">🔍 Open the clue lens</button></p></div>`;break;}
+  case "DIAG":
+    h=`<div class="stepbox"><h5>④ You diagnose. On these 10 cards: how many does "read the food" get right? How many does "read the plate" get right?</h5>
+    <p style="text-align:center;line-height:1.4">🔴 Red: ${TRAIN_BASE.filter(c=>c.plate==="r").map(c=>c.e).join(" ")} <- all "fruit"<br>🔵 Blue: ${TRAIN_BASE.filter(c=>c.plate==="b").map(c=>c.e).join(" ")} <- all "not"</p>
+    <div class="vote" style="justify-content:center"><button class="btn alt" onclick="diag('food')">Only food 10/10</button><button class="btn alt" onclick="diag('plate')">Only plate 10/10</button><button class="btn" onclick="diag('both')">Both 10/10</button></div>
+    <p id="diagFb" style="font-size:13.5px;font-weight:700"></p></div>`;break;
+  case "REPAIR_HYP":
+    h=`<div class="stepbox"><h5>⑤ Now fix it. Pick a plan.</h5>
+    <p style="font-size:14px">Both rules score 10/10 on the old cards, and Fluff's answer fits "go by plate". What do we feed to break the fake rule?</p>
+    <div class="vote" style="justify-content:center"><button class="btn alt" onclick="repairChoose('same')">More cards, same tidy pattern</button><button class="btn" onclick="repairChoose('cross')">Fruit on blue, non-fruit on red</button></div>
+    <p id="repFb" style="font-size:13.5px;font-weight:700"></p></div>`;break;
+  case "REPAIR_FEED":
+    h=`<div class="stepbox"><h5>⑥ Feed 2 shortcut-breaking counter-examples</h5>
+    <p style="font-size:13px">That banana was a test paper. It now goes <b>into the training book</b> -- it can never prove Fluff again.</p>
+    <div class="vote" style="justify-content:center">
+      ${REPAIR_SET.map(c=>`<button class="btn" id="rf-${c.id}" ${S.repairFed.includes(c.id)?"disabled style='opacity:.5'":""} onclick="feedRepair('${c.id}')">${c.e} ${c.plate==="b"?"🔵blue":"🔴red"} ${c.n} = ${lab(c.truth)}</button>`).join("")}
+    </div>
+    <p id="rfFb" style="font-size:13.5px;font-weight:700">${S.repairFed.length===1?"One in the book. Feed the other.":""}</p></div>`;break;
+  case "READY_RETRAIN":
+    h=`<div class="stepbox"><h5>⑦ The two rules finally split. Retrain.</h5>
+    <p style="font-size:14.5px">On 12 cards: food <b>12/12</b>, plate only <b>10/12</b>. But <b>fed is not learned</b>.</p>
+    <p style="text-align:center"><button class="btn" onclick="startRetrain()">🍽 Digest all 12 again</button></p></div>`;break;
+  case "RETRAINED":
+    h=`<div class="stepbox"><p class="result-line">🌌 Looking for the pattern again...</p></div>`;break;
+  case "POST_PREDICT":
+    h=`<div class="stepbox"><h5>⑧ Call it before the retest: same <b>new</b> food, different plate. Should the answer change?</h5>
+    <div class="vote" style="justify-content:center"><button class="btn" onclick="postPredict('same')">No change (food rule)</button><button class="btn alt" onclick="postPredict('change')">It changes</button><button class="btn alt" onclick="postPredict('unsure')">Not sure</button></div></div>`;break;
+  case "HOLDOUT":{
+    h=`<div class="stepbox"><h5>⑨ Hold-out papers. 4 cards that <b>never entered the training book</b>. Test only -- do not feed.</h5>
+    <p style="font-size:13px">Write the <b>real label</b> on each. Judge the food itself. All 4, then lock.</p>
+    <div style="text-align:center">${HOLDOUT_SET.map(c=>{
+      const done=S.holdFinal[c.id];
+      return `<div style="display:inline-block;margin:6px;padding:8px;border:2.5px solid var(--ink);border-radius:12px;background:${done?"#EFF7EF":"#fff"}"><span style="display:inline-block;text-align:center;margin:2px 6px"><span style="font-size:34px">${c.e}</span><br><small style="font-weight:800">${c.plate==="r"?"🔴red":"🔵blue"} ${c.n}</small></span><br>${done?`<b style="font-size:12.5px">Real: ${lab(done)}</b>`:`<button class="btn" style="font-size:12px;padding:5px 10px" onclick="holdTruth('${c.id}','fruit')">Fruit</button> <button class="btn alt" style="font-size:12px;padding:5px 10px" onclick="holdTruth('${c.id}','not')">Not</button>`}</div>`;}).join("")}</div>
+    ${Object.keys(S.holdFinal).length===4?`<p style="text-align:center"><button class="btn" onclick="lockHoldout()">🔒 Lock the papers</button></p>`:""}</div>`;break;}
+  case "LOCKED":
+    h=`<div class="stepbox"><h5>⑩ Papers locked. During a test: no feeding, no retraining.</h5>
+    <p style="text-align:center"><button class="btn" style="background:var(--wind)" onclick="revealHoldout()">📤 Fluff hands in all 4</button></p></div>`;break;
+  case "REVEALED":{
+    const rows=HOLDOUT_SET.map(c=>{const out=paperFluff(c,true),old=paperFluff(c,false);return `<tr><td>${c.e} ${c.plate==="b"?"🔵blue":"🔴red"} ${c.n}</td><td>${lab(c.truth)}</td><td><b style="color:#C0392B">${lab(old)}${old!==c.truth?" ✗":" ✓"}</b></td><td><b style="color:#2E7D4F">${lab(out)} ✓</b></td></tr>`;}).join("");
+    const pp=S.postPredict==="same"?"You called \"no change\" -- the evidence agrees.":S.postPredict==="change"?"You called \"it changes\" -- the evidence says no. Changing your mind for evidence is what a Tamer does.":"You said not sure. Here is the evidence.";
+    h=`<div class="stepbox"><h5>⑪ Results</h5>
+    <div class="tbwrap" style="margin:6px 0"><table class="tb"><tr><th>Paper</th><th>Real label</th><th>Old plate rule</th><th>Fluff, retrained</th></tr>${rows}</table></div>
+    <p style="font-size:14px">${pp} All 4 new samples <b>pass</b>. Same food on a different plate, same answer. The old plate rule only gets 2/4 and can't explain this. <b>Say "it passed this round", never "it will always be right".</b></p>
+    <p style="text-align:center"><button class="btn" onclick="ack()">Read it. Got it ✓</button></p></div>`;break;}
+  case "DONE":
+    h=`<div class="stepbox" style="border-left:8px solid var(--wind)"><h5>🎉 Loop closed: Feed -> Train -> Test -> Diagnose -> Fix -> Retest</h5>
+    <p style="font-size:14.5px">Gate unlocked. Turn the page and claim Trial 2.</p></div>`;break;
+  }
+  C.innerHTML=note+h;
+}
+/* events (every handler checks the phase) */
+function ansHuman(v){if(S.phase!=="HUMAN")return;S.humanFirst=v;S.humanFinal="fruit";S.phase="PREDICT";
+  if(v==="not")S.note="Recorded: you picked Not fruit, and it stays on the record. A blue plate can fool people too. Check the food: a banana is fruit. Real label: Fruit. Catching your own mistake beats faking a perfect first answer.";
+  else if(v==="unsure")S.note="Saying not sure beats faking. Check the fact: a banana is fruit. Real label: Fruit.";
+  save();renderChallenge();}
+function lockPredict(v){if(S.phase!=="PREDICT")return;S.predict=v;S.phase="REVEAL";S.asked=false;save();renderChallenge();}
+function openLens(){if(S.phase!=="REVEAL"||!S.asked)return;S.phase="DIAG";save();renderChallenge();}
+function diag(v){if(S.phase!=="DIAG")return;const fb=document.getElementById("diagFb");
+  if(v==="both"){S.phase="REPAIR_HYP";save();renderChallenge();}
+  else{S.diagTries++;save();fb.textContent=v==="food"?"Count again. Which of the 10 would \"read the plate\" get wrong? None -- red happens to be all fruit.":"Count again. Which of the 10 would \"read the food\" get wrong? None -- those labels were right to begin with.";}}
+function repairChoose(v){if(S.phase!=="REPAIR_HYP")return;const fb=document.getElementById("repFb");
+  if(v==="cross"){S.phase="REPAIR_FEED";save();renderChallenge();}
+  else{S.repairTries++;save();fb.textContent="More cards, same pairing. Plate and answer stay locked together, so both rules still score full marks. More is not varied.";}}
+function feedRepair(id){if(S.phase!=="REPAIR_FEED")return;if(!S.repairFed.includes(id)){S.repairFed.push(id);save();}
+  if(S.repairFed.length===2){S.phase="READY_RETRAIN";save();}renderChallenge();}
+function startRetrain(){if(S.phase!=="READY_RETRAIN")return;S.phase="RETRAINED";save();renderChallenge();setTimeout(()=>{S.phase="POST_PREDICT";save();renderChallenge();},1500);}
+function postPredict(v){if(S.phase!=="POST_PREDICT")return;S.postPredict=v;S.phase="HOLDOUT";save();renderChallenge();}
+function holdTruth(id,v){if(S.phase!=="HOLDOUT")return;const c=HOLDOUT_SET.find(x=>x.id===id);
+  if(v!==c.truth){S.note=`Calibrate the ruler first: ${c.n} ${c.truth==="fruit"?"is fruit":"is not fruit"}. We judge the food itself -- the plate does not answer for us. Real label: ${lab(c.truth)}. Your first answer is kept.`;S.holdT[id]=v;}
+  S.holdFinal[id]=c.truth;save();renderChallenge();}
+function lockHoldout(){if(S.phase!=="HOLDOUT")return;S.phase="LOCKED";save();renderChallenge();}
+function revealHoldout(){if(S.phase!=="LOCKED")return;S.phase="REVEALED";save();renderChallenge();}
+function ack(){if(S.phase!=="REVEALED")return;S.phase="DONE";save();renderChallenge();}
+function teacherNote(){const n=document.getElementById("tNote");n.style.display=n.style.display==="none"?"block":"none";}
+function resetPlateLoop(){if(!confirm("Reset only the Plate Secret trial?"))return;sessionStorage.removeItem(SKEY);S=init();renderTrain();renderChallenge();const i=window.deckIndexOf?deckIndexOf("Plate Secret"):-1;if(i>=0)deckGo(i);}
+function gateOff(){if(confirm("Teacher skip: turn off page gates for this chapter? Use only if short on time.")){window.__gateOff=true;alert("Gates off.");}}
+
+/* gate hook (registered before slides.js loads) */
+window.deckCanGo=({to})=>{
+  if(window.__gateOff)return {ok:true};
+  const iCh=window.deckIndexOf?deckIndexOf("Banana Challenge"):12;
+  if(to===iCh&&pv(S)<PHASES.indexOf("TRAINED"))return {ok:false,message:S.fed.length<10?`${10-S.fed.length} training cards to go. Feed all 10, then digest.`:`Book is full. Click "Let Fluff digest the 10".`};
+  if(to>iCh&&S.phase!=="DONE")return {ok:false,message:"Trial 2 isn't finished -- you're mid-loop on the Plate Secret."};
+  return {ok:true};
+};
+
+renderTrain();renderChallenge();
+
+/* ── Hatching Rite ── */
+const hb=document.getElementById("hatchBtn"),hi=document.getElementById("hatchImg");let hst=0;
+hb.onclick=()=>{
+  if(hst===0){hst=1;hi.classList.add("wobble");hb.textContent="✨ Tap again!";document.getElementById("hatchHint").textContent="The egg is shaking hard...!";}
+  else if(hst===1){hst=2;hi.classList.remove("wobble");hi.src="assets/maoqiu-happy.svg";
+    document.getElementById("hatchTitle").textContent="Fluff, juvenile. Born!";
+    document.getElementById("hatchHint").textContent="Welcome to the world, Fluff!";
+    hb.style.display="none";
+    const c=document.getElementById("conf1"),cols=["#FF8A3D","#F5B93F","#57B87A","#3A9BD9","#C94F7C"];
+    for(let i=0;i<48;i++){const s=document.createElement("i");s.style.left=Math.random()*100+"%";s.style.background=cols[i%5];s.style.animationDelay=(Math.random()*0.7)+"s";c.appendChild(s);}
+  }
+};
+</script>
+<script src="js/slides.js?v=4"></script>
+</body>
+</html>
